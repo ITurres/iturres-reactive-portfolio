@@ -1,0 +1,45 @@
+@import '../variables/colors.scss';
+@import '../variables/_fonts.scss';
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: url('../../assets/images/bg/portfolio-access-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-y: hidden; // ?> when button slide-up animation is about to start - it's causing a scrollbar to appear for a split second.
+  color: $color2;
+  height: 100vh;
+  width: 100%;
+  padding: 3rem 1rem;
+  text-align: center;
+
+  span {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-style: oblique;
+    font-family: $font-family-bold, 'Jura', sans-serif;
+  }
+
+  button {
+    font-family: $font-family-regular, 'Jura', sans-serif;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 5rem;
+    }
+
+    button {
+      margin-bottom: 3rem;
+    }
+  }
+}
