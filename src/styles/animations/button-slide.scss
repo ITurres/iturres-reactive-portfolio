@@ -1,0 +1,102 @@
+button.slide-up {
+  -webkit-animation: buttonslideup 3.5s ease-in-out 0.5s 1 alternate backwards; /* Safari 4+ */
+  -moz-animation: buttonslideup 3.5s ease-in-out 0.5s 1 alternate backwards; /* Fx 5+ */
+  -o-animation: buttonslideup 3.5s ease-in-out 0.5s 1 alternate backwards; /* Opera 12+ */
+  animation: buttonslideup 3.5s ease-in-out 0.5s 1 alternate backwards; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes buttonslideup {
+  0% {
+    position: relative;
+    top: 200px;
+    opacity: 0.3;
+    visibility: hidden;
+  }
+
+  25% {
+    top: 150px;
+    opacity: 0.5;
+  }
+
+  50% {
+    top: 1px;
+    opacity: 0.8;
+  }
+
+  100% {
+    top: unset;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes buttonslideup {
+  0% {
+    position: relative;
+    top: 200px;
+    opacity: 0.3;
+    visibility: hidden;
+  }
+
+  25% {
+    top: 150px;
+    opacity: 0.5;
+  }
+
+  50% {
+    top: 1px;
+    opacity: 0.8;
+  }
+
+  100% {
+    top: unset;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes buttonslideup {
+  0% {
+    position: relative;
+    top: 200px;
+    opacity: 0.3;
+    visibility: hidden;
+  }
+
+  25% {
+    top: 150px;
+    opacity: 0.5;
+  }
+
+  50% {
+    top: 1px;
+    opacity: 0.8;
+  }
+
+  100% {
+    top: unset;
+    opacity: 1;
+  }
+}
+
+@keyframes buttonslideup {
+  0% {
+    position: relative;
+    top: 200px;
+    opacity: 0.3;
+    visibility: hidden;
+  }
+
+  25% {
+    top: 150px;
+    opacity: 0.5;
+  }
+
+  50% {
+    top: 1px;
+    opacity: 0.8;
+  }
+
+  100% {
+    top: unset;
+    opacity: 1;
+  }
+}

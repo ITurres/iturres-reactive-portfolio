@@ -1,0 +1,24 @@
+.my-btn {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0.9rem 5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.my-btn.color1 {
+  background-color: $color1;
+
+  &:hover {
+    background-color: $color1-hover;
+  }
+}
+
+.my-btn.color2 {
+  background-color: $color2;
+
+  &:hover {
+    background-color: $color2-hover;
+  }
+}
