@@ -10,25 +10,27 @@
       "jsx": true
     },
     "ecmaVersion": 2018,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "extends": [
     "airbnb",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended"
   ],
-  "plugins": ["react"],
+  "plugins": ["react", "@typescript-eslint"], // *Include @typescript-eslint plugin
   "rules": {
-    "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".jsx", ".tsx"] }
+    ],
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off"
   },
   "overrides": [
     {
-      // ?feel free to replace with your preferred file pattern - eg. 'src/**/*Slice.js' or 'redux/**/*Slice.js'
       "files": ["src/**/*Slice.js"],
-      // !avoid state param assignment
       "rules": { "no-param-reassign": ["error", { "props": false }] }
     }
   ],
