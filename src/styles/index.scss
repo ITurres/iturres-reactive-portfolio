@@ -1,4 +1,25 @@
+@import 'base/normalize.css';
+@import './variables/colors.scss';
+@import './variables/_fonts.scss';
+@import 'UI/button.scss';
+
+@font-face {
+  font-family: 'RolexFont-Bold';
+  src: url('../assets/fonts/RolexFont-Bold-WebS.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'RolexFont-Regular';
+  src: url('../assets/fonts/RolexFont-Regular-WebS.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'RolexFont-Light';
+  src: url('../assets/fonts/RolexFont-Light-WebS.woff2') format('woff2');
+}
+
 body {
-  background-color: white;
-  color: black;
+  background-color: $dark;
+  color: $light;
+  font-family: $font-family-light, 'Jura', sans-serif;
 }
