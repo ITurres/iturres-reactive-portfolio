@@ -1,0 +1,63 @@
+.blend-in-out {
+  display: flex;
+  -webkit-animation: blend-in-out 2.5s ease-in-out; /* Safari 4+ */
+  -moz-animation: blend-in-out 2.5s ease-in-out; /* Fx 5+ */
+  -o-animation: blend-in-out 2.5s ease-in-out; /* Opera 12+ */
+  animation: blend-in-out 2.5s ease-in-out; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes blend-in-out {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blend-in-out {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes blend-in-out {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blend-in-out {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
