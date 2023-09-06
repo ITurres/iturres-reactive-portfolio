@@ -1,0 +1,62 @@
+.shrink-and-center {
+  -webkit-animation: shrink-and-center 0.1s ease-out forwards; /* Safari 4+ */
+  -moz-animation: shrink-and-center 0.1s ease-out forwards; /* Fx 5+ */
+  -o-animation: shrink-and-center 0.1s ease-out forwards; /* Opera 12+ */
+  animation: shrink-and-center 0.1s ease-out forwards; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes shrink-and-center {
+  0% {
+    -webkit-transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.5);
+  }
+
+  100% {
+    -webkit-transform: scale(0);
+  }
+}
+
+@-moz-keyframes shrink-and-center {
+  0% {
+    -moz-transform: scale(1);
+  }
+
+  50% {
+    -moz-transform: scale(0.5);
+  }
+
+  100% {
+    -moz-transform: scale(0);
+  }
+}
+
+@-o-keyframes shrink-and-center {
+  0% {
+    -o-transform: scale(1);
+  }
+
+  50% {
+    -o-transform: scale(0.5);
+  }
+
+  100% {
+    -o-transform: scale(0);
+  }
+}
+
+@keyframes shrink-and-center {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
