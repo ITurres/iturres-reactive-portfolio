@@ -1,0 +1,54 @@
+.rotate-hue-rotate {
+  -webkit-animation: rotate-hue-rotate 20s linear infinite; /* Safari 4+ */
+  -moz-animation: rotate-hue-rotate 20s linear infinite; /* Fx 5+ */
+  -o-animation: rotate-hue-rotate 20s linear infinite; /* Opera 12+ */
+  animation: rotate-hue-rotate 20s linear infinite;
+}
+
+@-webkit-keyframes rotate-hue-rotate {
+  0% {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotate-hue-rotate {
+  0% {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+@-o-keyframes rotate-hue-rotate {
+  0% {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes rotate-hue-rotate {
+  0% {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
