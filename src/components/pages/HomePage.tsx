@@ -15,8 +15,9 @@ const HomePage = () => {
   return (
     <section id="homepage" className="homepage container">
       <div className="homepage__about">
-        <h1 className="homepage__about-title hue-rotate">
-          i&apos;m arthur! your dev &#128075;
+        <h1 className="homepage__about-title text-hue-rotate">
+          i&apos;m arthur! your dev
+          <span className="emoji">&#128075;</span>
         </h1>
         <p className="homepage__about-p">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse,
@@ -29,12 +30,11 @@ const HomePage = () => {
         <img
           src={homepageDotsImage}
           alt="an abstract dotted figure"
-          className="image-layer figure rotate-resize"
+          className="image-layer figure rotate-hue-rotate"
         />
         <img
           src={profileImage}
           alt="my profile"
-          width="50%"
           className="image-layer profile"
         />
       </div>
