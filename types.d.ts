@@ -7,3 +7,8 @@ declare module '*.webm' {
   const webmSrc: string;
   export default webmSrc;
 }
+
+declare module '*.png' {
+  const pngSrc: string;
+  export default pngSrc;
+}
