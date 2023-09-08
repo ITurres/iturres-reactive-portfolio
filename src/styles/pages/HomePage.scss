@@ -3,8 +3,13 @@
 @import '../variables/_colors.scss';
 @import '../animations/rotate-hue-rotate.scss';
 @import '../animations/text-hue-rotate.scss';
+@import '../_mixins.scss';
 
 .homepage {
+  @include component-code-snippet('const HomePage = () => {');
+
+  user-select: none;
+
   &__about {
     &-title {
       font-family: $font-family-bold, 'Jura', sans-serif;
