@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+@mixin component-code-snippet($content) {
+  &::before,
+  &::after {
+    font-family: 'Architects Daughter', 'Jura', cursive, sans-serif;
+    font-size: 1.2rem;
+    font-style: oblique;
+    color: $color2;
+    animation: text-hue-rotate 10s infinite linear;
+    position: relative;
+  }
+
+  &::before {
+    content: $content;
+    align-self: flex-start;
+    top: 1rem;
+
+    @media (min-width: 768px) {
+      position: absolute;
+    }
+  }
+
+  &::after {
+    content: '};';
+    align-self: flex-end;
+    bottom: 1rem;
+  }
+}
