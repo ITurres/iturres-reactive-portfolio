@@ -6,6 +6,9 @@
 @import '../_mixins.scss';
 
 .homepage {
+  display: none;
+  flex-direction: column;
+
   @include component-code-snippet('const HomePage = () => {');
 
   user-select: none;
@@ -57,7 +60,7 @@
   }
 
   @media (min-width: 768px) {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 100vh;

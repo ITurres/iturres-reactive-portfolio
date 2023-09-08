@@ -8,6 +8,7 @@ const HomePage = () => {
   useEffect(() => {
     const $homepage = document.querySelector<HTMLDivElement>('#homepage');
     if ($homepage) {
+      $homepage.style.display = 'flex'; // ?overrides the {display: none} on 'HomePage.scss'. This is to prevent the homepage from showing before animation is applied.
       $homepage.classList.add('blend-in-out');
     }
   });
