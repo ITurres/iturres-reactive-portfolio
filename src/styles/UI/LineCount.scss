@@ -1,0 +1,27 @@
+.line-count {
+  display: none;
+
+  @media (min-width: 630px) {
+    & {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      background: $dark;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      margin: 0;
+      width: 40px;
+      padding: 1.2rem 0.3rem 0 0.3rem;
+      text-align: right;
+    }
+
+    &__line {
+      font-size: 1rem;
+      font-family: sans-serif;
+      color: $light-gray;
+      padding: 0.1rem 0.1rem 0.1rem 0.3rem;
+    }
+  }
+}
