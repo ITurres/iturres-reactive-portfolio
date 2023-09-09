@@ -7,8 +7,6 @@ const LineCount: React.FC = () => {
   // ? rounds to ensure that 'line' is always an integer.
   // !important to prevent >>RangeError: Invalid array length<<
 
-  console.log(Array.from(Array(lines).keys()));
-
   useEffect(() => {
     window.addEventListener('resize', () => {
       setWindowHeight(window.innerHeight);

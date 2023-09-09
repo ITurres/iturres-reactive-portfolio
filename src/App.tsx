@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import AccessPage from './components/pages/AccessPage.tsx';
 import HomePage from './components/pages/HomePage.tsx';
-import LineCount from './components/LineCount.tsx';
+import LineCount from './components/UI/LineCount.tsx';
 
 const App = () => (
   <>
