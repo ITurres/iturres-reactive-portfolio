@@ -8,6 +8,7 @@
 .homepage {
   display: none;
   flex-direction: column;
+  width: 90%;
 
   @include component-code-snippet('const HomePage = () => {');
 
