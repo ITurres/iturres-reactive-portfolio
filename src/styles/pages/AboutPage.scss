@@ -5,12 +5,12 @@
 @import '../animations/text-hue-rotate.scss';
 @import '../_mixins.scss';
 
-.homepage {
+.aboutPage {
   display: none;
   flex-direction: column;
   width: 90%;
 
-  @include component-code-snippet('const HomePage = () => {');
+  @include component-code-snippet('const About = () => {');
 
   user-select: none;
 
