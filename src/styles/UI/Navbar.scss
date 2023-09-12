@@ -1,0 +1,65 @@
+@import '../variables/_colors.scss';
+
+.menu-navbar,
+.toggle-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 2rem;
+  right: 3rem;
+}
+
+.menu-navbar {
+  position: absolute;
+  top: 0.5rem;
+  right: 1px;
+
+  li {
+    position: absolute;
+    list-style: none;
+    top: 2.7rem;
+    left: -6.7rem;
+    transform-origin: 65px;
+    transition: transform 0.3s;
+    transition-delay: calc(0.1s * var(--elem));
+    transform: rotate(0deg) translateX(55px);
+
+    a,
+    svg {
+      color: $color2;
+      transition: color 0.1s;
+
+      &:hover {
+        color: $color1-hover;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    top: 2rem;
+    right: 1.5rem;
+  }
+}
+
+.menu-navbar.active li {
+  transform: rotate(calc(360deg / 6 * var(--elem)));
+}
+
+.toggle-menu {
+  position: absolute;
+  background: $dark;
+  color: $color1;
+  border: 2px dotted $light-gray;
+  z-index: 200;
+  padding: 0.6rem;
+  border-radius: 100%;
+  transition: all 0.3s;
+
+  &:hover {
+    border: 2px dotted gray;
+  }
+}
+
+.menu-navbar.active .toggle-menu {
+  transform: rotate(180deg);
+}
