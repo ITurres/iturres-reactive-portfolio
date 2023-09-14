@@ -11,10 +11,6 @@
     opacity: 0;
   }
 
-  50% {
-    opacity: 0.5;
-  }
-
   100% {
     opacity: 1;
   }
@@ -23,10 +19,6 @@
 @-moz-keyframes blend-in-out {
   0% {
     opacity: 0;
-  }
-
-  50% {
-    opacity: 0.5;
   }
 
   100% {
@@ -39,10 +31,6 @@
     opacity: 0;
   }
 
-  50% {
-    opacity: 0.5;
-  }
-
   100% {
     opacity: 1;
   }
@@ -51,10 +39,6 @@
 @keyframes blend-in-out {
   0% {
     opacity: 0;
-  }
-
-  50% {
-    opacity: 0.5;
   }
 
   100% {
