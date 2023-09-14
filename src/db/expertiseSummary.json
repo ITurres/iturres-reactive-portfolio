@@ -1,0 +1,5 @@
+{
+  "languages": ["TypeScript", "JavaScript", "Ruby", "SASS", "CSS", "HTML"],
+  "frameworks": ["React.js", "Ruby on Rails", "RSpec"],
+  "skills": ["Version Control", "CLI", "Web Development"]
+}
