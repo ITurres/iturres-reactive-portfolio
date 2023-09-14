@@ -12,7 +12,9 @@
           "responsive",
           "screen",
           "mixin",
-          "include"
+          "include",
+          "use",
+          "forward"
         ]
       }
     ],
