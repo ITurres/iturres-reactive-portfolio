@@ -1,20 +1,32 @@
+@use '../styles/variables/colors' as colors;
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
-@mixin component-code-snippet($content) {
+@mixin component-code-snippet(
+  $content,
+  $color: colors.$color1,
+  $color-desktop: colors.$color1,
+  $top: 1,
+  $bottom: 1,
+  $bottom-desktop: 1
+) {
   &::before,
   &::after {
     font-family: 'Architects Daughter', 'Jura', cursive, sans-serif;
     font-size: 1.2rem;
     font-style: oblique;
-    color: $color2;
+    color: $color;
     animation: text-hue-rotate 10s infinite linear;
     position: relative;
+
+    @media (min-width: 768px) {
+      color: $color-desktop;
+    }
   }
 
   &::before {
     content: $content;
     align-self: flex-start;
-    top: 1rem;
+    top: #{$top}rem;
 
     @media (min-width: 768px) {
       position: absolute;
@@ -24,6 +36,10 @@
   &::after {
     content: '};';
     align-self: flex-end;
-    bottom: 1rem;
+    bottom: #{$bottom}rem;
+
+    @media (min-width: 768px) {
+      bottom: #{$bottom-desktop}rem;
+    }
   }
 }
