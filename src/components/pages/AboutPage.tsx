@@ -14,7 +14,7 @@ const AboutPage: React.FC = () => {
   });
 
   return (
-    <section id="aboutPage" className="aboutPage container">
+    <main id="aboutPage" className="aboutPage container">
       <div className="aboutPage__about">
         <h1 className="aboutPage__about-title text-hue-rotate">
           i&apos;m arthur! your dev
@@ -39,7 +39,7 @@ const AboutPage: React.FC = () => {
           className="image-layer profile"
         />
       </div>
-    </section>
+    </main>
   );
 };
 
