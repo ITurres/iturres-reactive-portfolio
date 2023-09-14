@@ -27,7 +27,7 @@ const AccessPage = () => {
 
   return (
     <>
-      <main id="access-page-main">
+      <main id="access-page-main" className="access-page-main">
         <span>Arthur Iturres</span>
         <h1>Delivering The Future</h1>
         <button
