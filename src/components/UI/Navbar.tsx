@@ -6,6 +6,7 @@ import { CgMenuMotion } from 'react-icons/cg';
 import { AiFillGithub, AiOutlineMail } from 'react-icons/ai';
 import { BiLogoLinkedin, BiExit } from 'react-icons/bi';
 import { FaProjectDiagram } from 'react-icons/fa';
+import { LuSquareStack } from 'react-icons/lu';
 
 import '../../styles/UI/Navbar.scss';
 
@@ -84,6 +85,15 @@ const Navbar: React.FC = () => {
         <li style={{ '--elem': 5 } as CSSProperties}>
           <Link to="/">
             <BiExit size={iconSize} className="text-hue-rotate" title="Exit" />
+          </Link>
+        </li>
+        <li style={{ '--elem': 6 } as CSSProperties}>
+          <Link to="/homepage/expertise">
+            <LuSquareStack
+              size={iconSize}
+              className="text-hue-rotate"
+              title="Expertise"
+            />
           </Link>
         </li>
       </ul>
