@@ -4,6 +4,8 @@ import profileImage from '../../assets/images/profile/profile.png';
 import homepageDotsImage from '../../assets/images/bg/homepage-dots-img.png';
 import '../../styles/pages/AboutPage.scss';
 
+import AnimatedButton from '../UI/AnimatedButton.tsx';
+
 const AboutPage: React.FC = () => {
   useEffect(() => {
     const $aboutPage = document.querySelector<HTMLDivElement>('#aboutPage');
@@ -26,6 +28,7 @@ const AboutPage: React.FC = () => {
           quos possimus quidem repellat ipsam sequi, mollitia perspiciatis
           suscipit id ipsa voluptates.
         </p>
+        <AnimatedButton />
       </div>
       <div className="aboutPage__images">
         <img
