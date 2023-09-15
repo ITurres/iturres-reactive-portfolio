@@ -1,0 +1,72 @@
+@use '../variables/colors' as colors;
+
+$color1-hover: colors.$color1;
+$color2-hover: colors.$color2;
+$dark: colors.$dark;
+
+.animated-button {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0.5em 1em;
+  border-bottom-right-radius: 20rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $dark;
+  border: 2px solid $color1-hover;
+  border-left: none;
+  border-top: none;
+  transition: 0.5s;
+  overflow: hidden;
+  z-index: 1;
+  max-width: 550px;
+  width: 100%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    background: #ffc107;
+    transform-origin: left;
+    transform: translateX(-100%) skewX(-15deg);
+    transition: 0.5s;
+    z-index: -1;
+  }
+
+  &:hover {
+    &::before {
+      transform: translateX(0%) skewX(-15deg);
+    }
+  }
+
+  &:active {
+    background-color: $color1-hover;
+  }
+
+  a {
+    color: $color1-hover;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      color: $color2-hover;
+    }
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    width: unset;
+
+    a {
+      &:not(:first-child) {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
