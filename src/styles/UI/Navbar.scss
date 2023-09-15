@@ -1,4 +1,12 @@
-@import '../variables/_colors.scss';
+@use '../variables/colors' as colors;
+
+$elementsInNavbar: 7;
+
+$color2: colors.$color2;
+$color1: colors.$color1;
+$color1-hover: colors.$color1-hover;
+$light-gray: colors.$light-gray;
+$dark: colors.$dark;
 
 .menu-navbar,
 .toggle-menu {
@@ -42,7 +50,7 @@
 }
 
 .menu-navbar.active li {
-  transform: rotate(calc(360deg / 6 * var(--elem)));
+  transform: rotate(calc(360deg / $elementsInNavbar * var(--elem)));
 }
 
 .toggle-menu {
