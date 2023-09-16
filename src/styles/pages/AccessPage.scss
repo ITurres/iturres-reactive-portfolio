@@ -5,13 +5,14 @@ $font-family-bold: fonts.$font-family-bold;
 $font-family-regular: fonts.$font-family-regular;
 
 $color2: colors.$color2;
+$color2-hover: colors.$color2-hover;
 
 .access-page-main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: url('../../assets/images/bg/portfolio-access-bg.jpg');
+  background: url('../../assets/images/bg/portfolio-access-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,10 +33,24 @@ $color2: colors.$color2;
     text-transform: uppercase;
     font-style: oblique;
     font-family: $font-family-bold;
+    -webkit-text-stroke: 0.7px $color2-hover; /* Safari/WebKit */
+    color: transparent;
   }
 
-  button {
+  button.my-btn {
     font-family: $font-family-regular;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    color: $color2-hover;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $color2-hover;
+    }
+
+    &:focus {
+      box-shadow: 0 0 200px $color2-hover;
+    }
   }
 
   @media (min-width: 768px) {
