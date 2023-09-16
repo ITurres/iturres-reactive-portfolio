@@ -1,22 +1,27 @@
-@import '../animations/blend-in-out.scss';
-@import '../variables/_fonts.scss';
-@import '../variables/_colors.scss';
-@import '../animations/rotate-hue-rotate.scss';
-@import '../animations/text-hue-rotate.scss';
-@import '../_mixins.scss';
+@use '../variables/fonts' as fonts;
+@use '../variables/colors' as colors;
+@use '../_mixins.scss' as mixins;
+
+@forward '../animations/blend-in-out.scss';
+@forward '../animations/rotate-hue-rotate.scss';
+@forward '../animations/text-hue-rotate.scss';
+
+$font-family-bold: fonts.$font-family-bold;
+
+$color1: colors.$color1;
 
 .aboutPage {
   display: none;
   flex-direction: column;
   width: 90%;
 
-  @include component-code-snippet('const About = () => {');
+  @include mixins.component-code-snippet('const About = () => {');
 
   user-select: none;
 
   &__about {
     &-title {
-      font-family: $font-family-bold, 'Jura', sans-serif;
+      font-family: $font-family-bold;
       font-size: 2.7rem;
       font-style: oblique;
       text-transform: capitalize;

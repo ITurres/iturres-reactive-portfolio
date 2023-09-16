@@ -1,5 +1,10 @@
-@import '../variables/colors.scss';
-@import '../variables/_fonts.scss';
+@use '../variables/colors' as colors;
+@use '../variables/fonts' as fonts;
+
+$font-family-bold: fonts.$font-family-bold;
+$font-family-regular: fonts.$font-family-regular;
+
+$color2: colors.$color2;
 
 .access-page-main {
   display: flex;
@@ -26,11 +31,11 @@
     margin-top: 2rem;
     text-transform: uppercase;
     font-style: oblique;
-    font-family: $font-family-bold, 'Jura', sans-serif;
+    font-family: $font-family-bold;
   }
 
   button {
-    font-family: $font-family-regular, 'Jura', sans-serif;
+    font-family: $font-family-regular;
   }
 
   @media (min-width: 768px) {

@@ -1,3 +1,10 @@
+@use '../variables/colors' as colors;
+
+$color1: colors.$color1;
+$color1-hover: colors.$color1-hover;
+$color2: colors.$color2;
+$color2-hover: colors.$color2-hover;
+
 .my-btn {
   border: 1px solid #000;
   border-radius: 5px;

@@ -1,8 +1,14 @@
-@import 'base/normalize.css';
-@import './variables/colors.scss';
-@import './variables/_fonts.scss';
-@import 'UI/button.scss';
-@import 'UI/LineCount.scss';
+@forward 'base/normalize.css';
+@forward 'UI/button.scss';
+@forward 'UI/LineCount.scss';
+
+@use './variables/colors' as colors;
+@use './variables/fonts' as fonts;
+
+$font-family-light: fonts.$font-family-light;
+
+$dark: colors.$dark;
+$light: colors.$light;
 
 @font-face {
   font-family: 'RolexFont-Bold';
@@ -22,5 +28,5 @@
 body {
   background-color: $dark;
   color: $light;
-  font-family: $font-family-light, 'Jura', sans-serif;
+  font-family: $font-family-light;
 }

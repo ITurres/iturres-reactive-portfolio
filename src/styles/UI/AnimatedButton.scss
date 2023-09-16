@@ -47,12 +47,11 @@ $dark: colors.$dark;
   }
 
   a {
-    color: $color1-hover;
     text-decoration: none;
     font-weight: 600;
 
     &:hover {
-      color: $color2-hover;
+      color: $dark;
     }
   }
 
