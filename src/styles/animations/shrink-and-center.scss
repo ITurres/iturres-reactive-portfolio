@@ -1,8 +1,8 @@
 .shrink-and-center {
-  -webkit-animation: shrink-and-center 0.1s ease-out forwards; /* Safari 4+ */
-  -moz-animation: shrink-and-center 0.1s ease-out forwards; /* Fx 5+ */
-  -o-animation: shrink-and-center 0.1s ease-out forwards; /* Opera 12+ */
-  animation: shrink-and-center 0.1s ease-out forwards; /* IE 10+, Fx 29+ */
+  -webkit-animation: shrink-and-center 0.2s 5s ease-out forwards; /* Safari 4+ */
+  -moz-animation: shrink-and-center 0.2s 5s ease-out forwards; /* Fx 5+ */
+  -o-animation: shrink-and-center 0.2s 5s ease-out forwards; /* Opera 12+ */
+  animation: shrink-and-center 0.2s 5s ease-out forwards; /* IE 10+, Fx 29+ */
 }
 
 @-webkit-keyframes shrink-and-center {
