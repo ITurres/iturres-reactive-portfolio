@@ -9,8 +9,9 @@ const AccessPage = () => {
   const navigate = useNavigate();
 
   const handleAccess = () => {
-    const $accessPageMain = document.querySelector<HTMLDivElement>('#access-page-main');
+    const $accessPageMain = document.querySelector<HTMLElement>('.access-page-main');
     if ($accessPageMain) {
+      $accessPageMain.classList.remove('text-hue-rotate');
       $accessPageMain.classList.add('shrink-and-center');
     }
 
@@ -26,8 +27,8 @@ const AccessPage = () => {
   };
 
   return (
-    <>
-      <main id="access-page-main" className="access-page-main">
+    <div className="blend-in-out">
+      <main className="access-page-main text-hue-rotate">
         <span>Arthur Iturres</span>
         <h1>Delivering The Future</h1>
         <button
@@ -39,7 +40,7 @@ const AccessPage = () => {
         </button>
       </main>
       <AccessPageVideo />
-    </>
+    </div>
   );
 };
 
