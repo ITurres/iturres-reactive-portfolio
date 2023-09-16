@@ -57,14 +57,14 @@ $dark: colors.$dark;
   position: absolute;
   background: $dark;
   color: $color1;
-  border: 2px dotted $light-gray;
+  border: 2px solid $light-gray;
   z-index: 200;
   padding: 0.6rem;
   border-radius: 100%;
   transition: all 0.3s;
 
   &:hover {
-    border: 2px dotted gray;
+    border: 2px solid gray;
   }
 }
 
