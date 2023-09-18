@@ -12,3 +12,8 @@ declare module '*.png' {
   const pngSrc: string;
   export default pngSrc;
 }
+
+declare module '*.gif' {
+  const gifSrc: string;
+  export default gifSrc;
+}
