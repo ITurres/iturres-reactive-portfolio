@@ -5,6 +5,7 @@ import AboutPage from './AboutPage.tsx';
 import LineCount from '../UI/LineCount.tsx';
 import Navbar from '../UI/Navbar.tsx';
 import ExpertiseSummaryPage from './ExpertiseSummaryPage.tsx';
+import ContactPage from './ContactPage.tsx';
 
 const HomePage: React.FC = () => (
   <>
@@ -14,6 +15,7 @@ const HomePage: React.FC = () => (
       <Route path="/" element={<Outlet />}>
         <Route path="/" element={<AboutPage />} />
         <Route path="/expertise" element={<ExpertiseSummaryPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Route>
     </Routes>
   </>
