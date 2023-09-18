@@ -1,0 +1,70 @@
+.drone {
+  position: absolute;
+  width: 30%;
+  max-width: 250px;
+  user-select: none;
+  opacity: 0;
+}
+
+.drone-fade-in {
+  -webkit-animation: fade-in 0.5s 0.1s ease-in-out forwards; /* Safari 4+ */
+  -moz-animation: fade-in 0.5s 0.1s ease-in-out forwards; /* Fx 5+ */
+  -o-animation: fade-in 0.5s 0.1s ease-in-out forwards; /* Opera 12+ */
+  animation: fade-in 0.5s 0.1s ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
