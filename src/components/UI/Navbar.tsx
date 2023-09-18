@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
           </Link>
         </li>
         <li style={{ '--elem': 4 } as CSSProperties}>
-          <Link to="/homepage">
+          <Link to="/homepage/contact">
             <AiOutlineMail
               size={iconSize}
               className="text-hue-rotate"
