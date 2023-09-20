@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/pages/AccessPage.scss';
 import '../../styles/animations/button-slide.scss';
@@ -6,40 +6,47 @@ import '../../styles/animations/shrink-and-center.scss';
 import AccessPageVideo from '../animations/AccessPageVideo.tsx';
 
 const AccessPage = () => {
+  const $accessPageMain = useRef<HTMLElement>(null);
+  const $videoElement = useRef<HTMLVideoElement>(null);
   const navigate = useNavigate();
 
-  const handleAccess = () => {
-    const $accessPageMain = document.querySelector<HTMLElement>('.access-page-main');
-    if ($accessPageMain) {
-      $accessPageMain.classList.remove('text-hue-rotate');
-      $accessPageMain.classList.add('shrink-and-center');
+  const handleMainElementAnimations = () => {
+    if ($accessPageMain.current) {
+      $accessPageMain.current.classList.remove('text-hue-rotate');
+      $accessPageMain.current.classList.add('shrink-and-center');
     }
+  };
 
-    const $videoElement = document.querySelector<HTMLVideoElement>('#access-page-video');
-    if ($videoElement) {
+  const handleVideoInteraction = () => {
+    if ($videoElement.current) {
       setTimeout(() => {
-        $videoElement.style.display = 'block';
-        $videoElement.play();
+        if ($videoElement.current) {
+          $videoElement.current.style.display = 'block';
+          $videoElement.current.play();
+        }
       }, 200);
 
-      $videoElement.addEventListener('ended', () => navigate('/homepage'));
+      $videoElement.current.addEventListener('ended', () => navigate('/homepage'));
     }
   };
 
   return (
     <div className="blend-in-out">
-      <main className="access-page-main text-hue-rotate">
+      <main ref={$accessPageMain} className="access-page-main text-hue-rotate">
         <span>Arthur Iturres</span>
         <h1>Delivering The Future</h1>
         <button
           type="button"
           className="my-btn color2 slide-up"
-          onClick={handleAccess}
+          onClick={() => {
+            handleMainElementAnimations();
+            handleVideoInteraction();
+          }}
         >
           Access
         </button>
       </main>
-      <AccessPageVideo />
+      <AccessPageVideo $videoElement={$videoElement} />
     </div>
   );
 };
