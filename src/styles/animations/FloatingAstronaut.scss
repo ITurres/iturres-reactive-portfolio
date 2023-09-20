@@ -1,0 +1,31 @@
+body:has(.floating-astronaut) {
+  overflow: hidden;
+}
+
+.floating-astronaut {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  max-width: var(--maxWidth);
+  transform: rotate(var(--rotate));
+  animation: floating-astronaut-move var(--animationSpeed) ease-in-out infinite;
+}
+
+@keyframes floating-astronaut-move {
+  from {
+    top: var(--fromTop);
+    left: var(--fromLeft);
+    right: var(--fromRight);
+    scale: var(--fromScale);
+    filter: hue-rotate(0deg);
+  }
+
+  to {
+    top: var(--toTop);
+    left: var(--toLeft);
+    right: var(--toRight);
+    scale: var(--toScale);
+    filter: hue-rotate(360deg);
+    display: none;
+  }
+}
