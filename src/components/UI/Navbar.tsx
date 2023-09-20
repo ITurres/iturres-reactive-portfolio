@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import { SiAboutdotme } from 'react-icons/si';
@@ -11,15 +11,15 @@ import { LuSquareStack } from 'react-icons/lu';
 import '../../styles/UI/Navbar.scss';
 
 const Navbar: React.FC = () => {
+  const $menu = useRef<HTMLElement>(null);
   const iconSize = 30;
 
   const toggleMenu = () => {
-    const menu = document.querySelector<HTMLElement>('#menu');
-    menu?.classList.toggle('active');
+    $menu.current?.classList.toggle('active');
   };
 
   return (
-    <nav id="menu" className="menu-navbar">
+    <nav ref={$menu} className="menu-navbar">
       <button
         className="toggle-menu my-btn hover-text"
         type="button"
