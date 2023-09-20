@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-// import Drone from '../animations/Drone.tsx';
+import Drone from '../animations/Drone.tsx';
 
 const ContactPage: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -18,7 +18,7 @@ const ContactPage: React.FC = () => {
     };
   }, [windowWidth]);
 
-//   return <div>{windowWidth >= laptopWidth ? <Drone /> : null}</div>;
+  return <div>{windowWidth >= laptopWidth ? <Drone /> : null}</div>;
 };
 
 export default ContactPage;
