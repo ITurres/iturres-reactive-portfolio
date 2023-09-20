@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 import mp4Video from '../../assets/images/bg/portfolio-access-animation-2-short.mp4';
 import webmVideo from '../../assets/images/bg/portfolio-access-animation-2-short.webm';
 
-const AccessPageVideo: React.FC = () => (
+/* eslint-disable no-undef */
+interface AccessPageVideoProps {
+  $videoElement: RefObject<HTMLVideoElement> | null;
+}
+
+const AccessPageVideo: React.FC<AccessPageVideoProps> = ({ $videoElement }) => (
   /* eslint-disable jsx-a11y/media-has-caption */
   <video
     playsInline
-    id="access-page-video"
+    ref={$videoElement}
     className="accessPage-video"
     width="100%"
   >
@@ -16,5 +21,7 @@ const AccessPageVideo: React.FC = () => (
   </video>
   /* eslint-disable jsx-a11y/media-has-caption */
 );
+
+/* eslint-disable no-undef */
 
 export default AccessPageVideo;
