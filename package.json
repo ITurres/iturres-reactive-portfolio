@@ -49,6 +49,7 @@
     "@babel/preset-typescript": "^7.22.11",
     "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/parser": "^5.62.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.27.5",
