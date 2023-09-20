@@ -12,7 +12,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.15.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.1.0-next.14",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -47,6 +47,7 @@
     "@babel/plugin-syntax-jsx": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "@babel/preset-typescript": "^7.22.11",
+    "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
