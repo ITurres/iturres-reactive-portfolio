@@ -8,7 +8,7 @@ const Drone: React.FC = () => {
   const drone = useRef<HTMLImageElement>(null);
   const lastPosition = useRef({ x: 0, y: 0 });
   const currentRotation = useRef(0);
-  const rotationSensitivity = 3;
+  const rotationSensitivity = 1;
 
   useEffect(() => {
     if (firstMove) {
