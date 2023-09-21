@@ -8,11 +8,23 @@ body:has(.floating-astronaut) {
   width: 100%;
   max-width: var(--maxWidth);
   transform: rotate(var(--rotate));
-  animation: floating-astronaut-move var(--animationSpeed) ease-in-out infinite;
+  -webkit-animation:
+    floating-astronaut-move var(--animationSpeed) ease-in-out
+    infinite; /* Safari 4+ */
+
+  -moz-animation:
+    floating-astronaut-move var(--animationSpeed) ease-in-out
+    infinite; /* Fx 5+ */
+
+  -o-animation:
+    floating-astronaut-move var(--animationSpeed) ease-in-out
+    infinite; /* Opera 12+ */
+
+  animation: floating-astronaut-move var(--animationSpeed) ease-in-out infinite; /* IE 10+, Fx 29+ */
 }
 
-@keyframes floating-astronaut-move {
-  from {
+@-webkit-keyframes floating-astronaut-move {
+  0% {
     top: var(--fromTop);
     left: var(--fromLeft);
     right: var(--fromRight);
@@ -20,7 +32,64 @@ body:has(.floating-astronaut) {
     filter: hue-rotate(0deg);
   }
 
-  to {
+  100% {
+    top: var(--toTop);
+    left: var(--toLeft);
+    right: var(--toRight);
+    scale: var(--toScale);
+    filter: hue-rotate(360deg);
+    display: none;
+  }
+}
+
+@-moz-keyframes floating-astronaut-move {
+  0% {
+    top: var(--fromTop);
+    left: var(--fromLeft);
+    right: var(--fromRight);
+    scale: var(--fromScale);
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    top: var(--toTop);
+    left: var(--toLeft);
+    right: var(--toRight);
+    scale: var(--toScale);
+    filter: hue-rotate(360deg);
+    display: none;
+  }
+}
+
+@-o-keyframes floating-astronaut-move {
+  0% {
+    top: var(--fromTop);
+    left: var(--fromLeft);
+    right: var(--fromRight);
+    scale: var(--fromScale);
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    top: var(--toTop);
+    left: var(--toLeft);
+    right: var(--toRight);
+    scale: var(--toScale);
+    filter: hue-rotate(360deg);
+    display: none;
+  }
+}
+
+@keyframes floating-astronaut-move {
+  0% {
+    top: var(--fromTop);
+    left: var(--fromLeft);
+    right: var(--fromRight);
+    scale: var(--fromScale);
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
     top: var(--toTop);
     left: var(--toLeft);
     right: var(--toRight);
