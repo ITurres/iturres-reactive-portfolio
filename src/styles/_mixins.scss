@@ -44,3 +44,12 @@
     }
   }
 }
+
+@mixin background-image($image, $size, $position, $repeat) {
+  & {
+    background-image: url($image);
+    background-size: $size;
+    background-position: $position;
+    background-repeat: $repeat;
+  }
+}
