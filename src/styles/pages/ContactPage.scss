@@ -1,0 +1,21 @@
+@use '../mixins' as mixins;
+
+@forward '../animations/blend-in-out.scss';
+
+body:has(.drone) {
+  overflow: hidden;
+}
+
+.contact-page-bg--container {
+  @include mixins.background-image(
+    '../assets/images/bg/futuristic-sci-fi-3d-illustration-bg.jpg',
+    cover,
+    center,
+    no-repeat
+  );
+}
+
+.contact-page {
+  height: 100vh;
+  padding: 3rem 1rem;
+}
