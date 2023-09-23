@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
+import '../../styles/pages/ContactPage.scss';
+
 import Drone from '../animations/Drone.tsx';
+import ContactForm from '../UI/ContactForm.tsx';
 
 const ContactPage: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -18,7 +21,16 @@ const ContactPage: React.FC = () => {
     };
   }, [windowWidth]);
 
-  return <div>{windowWidth >= laptopWidth ? <Drone /> : null}</div>;
+  return (
+    <div className="contact-page-bg--container">
+      <div className="blend-in-out">
+        {windowWidth >= laptopWidth ? <Drone /> : null}
+        <main className="contact-page container">
+          <ContactForm />
+        </main>
+      </div>
+    </div>
+  );
 };
 
 export default ContactPage;
