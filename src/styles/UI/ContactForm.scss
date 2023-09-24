@@ -1,0 +1,116 @@
+@use '../variables/colors' as colors;
+
+@import '../animations/show-input.scss';
+
+$color1: colors.$color1;
+$color2-hover: colors.$color2-hover;
+$light-gray: colors.$light-gray;
+$dark: colors.$dark;
+
+$transparent-black: rgba(0, 0, 0, 0.337);
+$border-size: 2px;
+$invalid: rgb(243, 12, 12);
+$valid: rgb(9, 247, 9);
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80vh;
+  max-width: 500px;
+
+  input,
+  textarea {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    font-family: 'Jura', sans-serif;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    border: none;
+    border-left: $border-size solid $color2-hover;
+    border-right: $border-size solid $color2-hover;
+    background-color: $transparent-black;
+    color: $color1;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 1.2rem;
+
+    :not([name='name']) {
+      display: none; // * will show only the name input first. Class .show will show the rest of the inputs
+    }
+
+    :focus {
+      outline: $border-size solid $color1;
+      box-shadow: 0 0 0.8rem $color1;
+      scale: 1.1;
+      border: none;
+      border-left: $border-size solid transparent;
+      border-right: $border-size solid transparent;
+    }
+
+    ::placeholder {
+      color: $color2-hover;
+    }
+
+    :-webkit-autofill,
+    :-webkit-autofill:focus {
+      -webkit-text-fill-color: $color1;
+      box-shadow: 0 0 0 1000px $dark inset;
+      border-left: $border-size solid $color1;
+      border-right: $border-size solid $color1;
+    }
+
+    .invalid {
+      border-left: $border-size solid $invalid;
+      border-right: $border-size solid $invalid;
+    }
+
+    .valid {
+      border-left: $border-size solid $valid;
+      border-right: $border-size solid $valid;
+      display: inline;
+    }
+
+    .show {
+      display: block;
+    }
+
+    textarea {
+      margin-top: 1.5rem;
+      min-height: 100px;
+      max-height: 400px;
+    }
+  }
+
+  button[type='submit'] {
+    background-color: $transparent-black;
+    border-bottom: $border-size solid $color1;
+    color: $color1;
+    margin-top: 1.5rem;
+    animation: none;
+
+    &:hover {
+      color: $color2-hover;
+    }
+
+    &.invalid {
+      color: $invalid;
+      text-decoration: line-through;
+      border-bottom: $border-size solid $invalid;
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+
+    &.valid {
+      color: $valid;
+      text-shadow: 0 0 1rem $valid;
+      border-bottom: $border-size solid $valid;
+
+      &:hover {
+        text-shadow: 0 0 5rem $valid;
+      }
+    }
+  }
+}
