@@ -1,4 +1,7 @@
+@use '../variables/colors' as colors;
 @use '../mixins' as mixins;
+
+$color1: colors.$color1;
 
 @forward '../animations/blend-in-out.scss';
 
@@ -16,6 +19,22 @@ body:has(.drone) {
 }
 
 .contact-page {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   padding: 3rem 1rem;
+  width: 100%;
+
+  @include mixins.component-code-snippet(
+    'const Contact = () => {',
+    colors.$color1,
+    colors.$color1,
+    -2
+  );
+
+  @media (min-width: 768px) {
+    width: 90%;
+
+    @include mixins.component-code-snippet('const Contact = () => {');
+  }
 }
