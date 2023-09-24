@@ -1,5 +1,7 @@
 import React, { useRef, useEffect, useMemo } from 'react';
 
+import '../../styles/UI/ContactForm.scss';
+
 import config from '../../config.ts';
 
 const ContactForm: React.FC = () => {
@@ -10,6 +12,7 @@ const ContactForm: React.FC = () => {
   const $companyInputRef = useRef<HTMLInputElement | null>(null);
   const $emailInputRef = useRef<HTMLInputElement | null>(null);
   const $messageInputRef = useRef<HTMLTextAreaElement | null>(null);
+  const $submitButton = useRef<HTMLButtonElement | null>(null);
 
   const inputs = useMemo(
     () => [$nameInputRef, $companyInputRef, $emailInputRef, $messageInputRef],
@@ -63,9 +66,14 @@ const ContactForm: React.FC = () => {
       if (!regex.test(input.current?.value)) {
         input.current?.classList.remove('valid');
         input.current?.classList.add('invalid');
+        $submitButton.current?.classList.remove('valid');
+        $submitButton.current?.classList.add('invalid');
       } else {
         input.current?.classList.add('valid');
+        input.current?.nextSibling?.classList.add('show');
         input.current?.classList.remove('invalid');
+        $submitButton.current?.classList.add('valid');
+        $submitButton.current?.classList.remove('invalid');
       }
     };
 
@@ -87,39 +95,49 @@ const ContactForm: React.FC = () => {
   }, [inputs, validInputsPattern]);
 
   return (
-    <form className="contact-form" ref={$form} onSubmit={handleSubmission}>
-      <div className="contact-form__group">
-        <input
-          type="text"
-          ref={$nameInputRef}
-          name="name"
-          minLength={2}
-          required
-        />
-      </div>
-      <div className="contact-form__group">
-        <input
-          type="text"
-          ref={$companyInputRef}
-          name="company"
-          minLength={3}
-          required
-        />
-      </div>
-      <div className="contact-form__group">
-        <input type="email" ref={$emailInputRef} name="email" required />
-      </div>
-      <div className="contact-form__group">
-        <textarea
-          ref={$messageInputRef}
-          name="message"
-          minLength={20}
-          rows={5}
-          cols={20}
-          required
-        />
-      </div>
-      <button type="submit">Send</button>
+    <form
+      className="contact-form container"
+      ref={$form}
+      onSubmit={handleSubmission}
+    >
+      <input
+        type="text"
+        ref={$nameInputRef}
+        name="name"
+        placeholder="tell me your name"
+        minLength={2}
+        required
+      />
+
+      <input
+        type="text"
+        ref={$companyInputRef}
+        name="company"
+        placeholder="your company name here!"
+        minLength={3}
+        required
+      />
+
+      <input
+        type="email"
+        ref={$emailInputRef}
+        name="email"
+        placeholder="an email so I can contact you back!"
+        required
+      />
+
+      <textarea
+        ref={$messageInputRef}
+        name="message"
+        placeholder="your message here!"
+        rows={5}
+        cols={20}
+        required
+      />
+
+      <button type="submit" ref={$submitButton} className="my-btn">
+        Send
+      </button>
     </form>
   );
 };
