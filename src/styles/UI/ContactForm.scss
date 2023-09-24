@@ -19,6 +19,12 @@ $valid: rgb(9, 247, 9);
   min-height: 80vh;
   max-width: 500px;
 
+  textarea {
+    margin-top: 1.5rem;
+    min-height: 100px;
+    max-height: 400px;
+  }
+
   input,
   textarea {
     border-radius: 0.5rem;
@@ -35,11 +41,11 @@ $valid: rgb(9, 247, 9);
     transition: all 0.3s ease-in-out;
     margin-bottom: 1.2rem;
 
-    :not([name='name']) {
+    &:not([name='name']) {
       display: none; // * will show only the name input first. Class .show will show the rest of the inputs
     }
 
-    :focus {
+    &:focus {
       outline: $border-size solid $color1;
       box-shadow: 0 0 0.8rem $color1;
       scale: 1.1;
@@ -48,37 +54,31 @@ $valid: rgb(9, 247, 9);
       border-right: $border-size solid transparent;
     }
 
-    ::placeholder {
+    &::placeholder {
       color: $color2-hover;
     }
 
-    :-webkit-autofill,
-    :-webkit-autofill:focus {
+    &:-webkit-autofill,
+    &:-webkit-autofill:focus {
       -webkit-text-fill-color: $color1;
       box-shadow: 0 0 0 1000px $dark inset;
       border-left: $border-size solid $color1;
       border-right: $border-size solid $color1;
     }
 
-    .invalid {
+    &.invalid {
       border-left: $border-size solid $invalid;
       border-right: $border-size solid $invalid;
     }
 
-    .valid {
+    &.valid {
       border-left: $border-size solid $valid;
       border-right: $border-size solid $valid;
       display: inline;
     }
 
-    .show {
+    &.show {
       display: block;
-    }
-
-    textarea {
-      margin-top: 1.5rem;
-      min-height: 100px;
-      max-height: 400px;
     }
   }
 
