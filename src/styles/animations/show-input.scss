@@ -1,0 +1,63 @@
+.show {
+  --webkit-animation: show-input 1s ease-in-out forwards; /* Safari 4+ */
+  --moz-animation: show-input 1s ease-in-out forwards; /* Fx 5+ */
+  --o-animation: show-input 1s ease-in-out forwards; /* Opera 12+ */
+
+  animation: show-input 1s ease-in-out forwards; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes show-input {
+  0% {
+    display: none;
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes show-input {
+  0% {
+    display: none;
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@-o-keyframes show-input {
+  0% {
+    display: none;
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes show-input {
+  0% {
+    display: none;
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
