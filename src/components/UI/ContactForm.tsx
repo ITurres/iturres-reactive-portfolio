@@ -1,10 +1,18 @@
-import React, { useRef, useEffect, useMemo } from 'react';
+import React, {
+  useRef, useEffect, useMemo, useState,
+} from 'react';
 
 import '../../styles/UI/ContactForm.scss';
 
 import config from '../../config.ts';
 
 const ContactForm: React.FC = () => {
+  const [formContent, setFormContent] = useState(
+    JSON.parse(sessionStorage.getItem('formContent')!) || null,
+    // * ! = non-null assertion operator to tell TS that
+    // * sessionStorage.getItem('formContent')! is not null.
+  );
+
   const actionURL = config.formActionURL;
 
   const $form = useRef<HTMLFormElement | null>(null);
@@ -29,6 +37,68 @@ const ContactForm: React.FC = () => {
     }),
     [],
   );
+
+  const validateInput = (input: any, regex: RegExp) => {
+    if (!regex.test(input.current?.value)) {
+      input.current?.classList.remove('valid');
+      input.current?.classList.add('invalid');
+      $submitButton.current?.classList.remove('valid');
+      $submitButton.current?.classList.add('invalid');
+    } else {
+      input.current?.classList.add('valid');
+      input.current?.nextSibling?.classList.add('show');
+      input.current?.classList.remove('invalid');
+      $submitButton.current?.classList.add('valid');
+      $submitButton.current?.classList.remove('invalid');
+    }
+  };
+
+  const updateFormContent = () => {
+    const newFormContent = inputs.reduce((acc, input) => {
+      const inputKeyInformContent = input.current
+        ?.name as keyof typeof formContent;
+      if (inputKeyInformContent) {
+        acc[inputKeyInformContent] = input.current?.value;
+      }
+      return acc;
+    }, {} as typeof formContent);
+
+    setFormContent(newFormContent);
+    sessionStorage.setItem('formContent', JSON.stringify(newFormContent));
+  };
+
+  useEffect(() => {
+    inputs.forEach((input) => {
+      input.current?.addEventListener('blur', updateFormContent);
+    });
+
+    return () => {
+      inputs.forEach((input) => {
+        input.current?.removeEventListener('blur', updateFormContent);
+      });
+    };
+  }, [inputs]);
+
+  // * this useEffect is to update the form inputs values and styles
+  // * when the user comes back to the page.
+  useEffect(() => {
+    if (formContent) {
+      inputs.forEach((input) => {
+        const inputKeyInValidInputsPattern = input.current
+          ?.name as keyof typeof validInputsPattern;
+        // * key = 'name' | 'company' | 'email' | 'message'
+
+        const inputKey = input; // * follows no param reassignment rule.
+        if (inputKey.current) {
+          inputKey.current.value = formContent[inputKeyInValidInputsPattern];
+          validateInput(
+            inputKey,
+            validInputsPattern[inputKeyInValidInputsPattern],
+          );
+        }
+      });
+    }
+  }, [formContent, inputs, validInputsPattern]);
 
   const submitButtonErrorContent = (error: Error | string) => {
     if ($submitButton.current) {
@@ -67,7 +137,9 @@ const ContactForm: React.FC = () => {
   const handleSubmission = (event: React.FormEvent) => {
     event.preventDefault();
 
+    // ! this it is not very secure, since valid class can be added/changed manually to the inputs.
     const allValidInputs = inputs.every((input) => input.current?.classList.contains('valid'));
+    // ! >>>>needs to be address ASAP<<<<. maybe with internal flags.
 
     if (allValidInputs) {
       submitForm();
@@ -75,21 +147,6 @@ const ContactForm: React.FC = () => {
   };
 
   useEffect(() => {
-    const validateInput = (input: any, regex: RegExp) => {
-      if (!regex.test(input.current?.value)) {
-        input.current?.classList.remove('valid');
-        input.current?.classList.add('invalid');
-        $submitButton.current?.classList.remove('valid');
-        $submitButton.current?.classList.add('invalid');
-      } else {
-        input.current?.classList.add('valid');
-        input.current?.nextSibling?.classList.add('show');
-        input.current?.classList.remove('invalid');
-        $submitButton.current?.classList.add('valid');
-        $submitButton.current?.classList.remove('invalid');
-      }
-    };
-
     inputs.forEach((input) => {
       const inputName = input.current?.name;
 
@@ -98,10 +155,13 @@ const ContactForm: React.FC = () => {
       }
 
       if (inputName) {
-        const key = inputName as keyof typeof validInputsPattern;
+        const inputKeyInValidInputsPattern = inputName as keyof typeof validInputsPattern;
         // * key = 'name' | 'company' | 'email' | 'message'
         input.current?.addEventListener('keyup', () => {
-          validateInput(input, validInputsPattern[key]);
+          validateInput(
+            input,
+            validInputsPattern[inputKeyInValidInputsPattern],
+          );
         });
       }
     });
