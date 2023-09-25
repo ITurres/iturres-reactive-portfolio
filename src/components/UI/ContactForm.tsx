@@ -30,6 +30,15 @@ const ContactForm: React.FC = () => {
     [],
   );
 
+  const submitButtonErrorContent = (error: Error | string) => {
+    if ($submitButton.current) {
+      $submitButton.current.textContent = '';
+      $submitButton.current.appendChild(
+        document.createTextNode(`Error! ${error}`),
+      );
+    }
+  };
+
   const submitForm = async () => {
     try {
       await fetch(actionURL, {
@@ -44,9 +53,14 @@ const ContactForm: React.FC = () => {
           Accept: 'application/json',
         },
       });
-    } catch (error) {
-      console.error(error);
-      // TODO: Add error handling
+
+      $form.current?.reset();
+    } catch (error: Error | unknown) {
+      if (error instanceof Error) {
+        submitButtonErrorContent(error);
+      } else {
+        submitButtonErrorContent(String(error));
+      }
     }
   };
 
@@ -57,7 +71,6 @@ const ContactForm: React.FC = () => {
 
     if (allValidInputs) {
       submitForm();
-      $form.current?.reset();
     }
   };
 
