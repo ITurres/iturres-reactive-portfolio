@@ -13,6 +13,8 @@ const ContactForm: React.FC = () => {
     // * sessionStorage.getItem('formContent')! is not null.
   );
 
+  const [formSubmittedStatus, setFormSubmittedStatus] = useState(false);
+
   const actionURL = config.formActionURL;
 
   const $form = useRef<HTMLFormElement | null>(null);
@@ -109,6 +111,22 @@ const ContactForm: React.FC = () => {
     }
   };
 
+  const hideInputs = () => {
+    if (formSubmittedStatus) {
+      inputs.forEach((input) => {
+        const inputElement = input;
+        if (inputElement.current) {
+          inputElement.current.classList.remove('show');
+          inputElement.current.style.display = 'none';
+        }
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (formSubmittedStatus) hideInputs();
+  }, [formSubmittedStatus]);
+
   const submitForm = async () => {
     try {
       await fetch(actionURL, {
@@ -125,6 +143,8 @@ const ContactForm: React.FC = () => {
       });
 
       $form.current?.reset();
+      sessionStorage.clear();
+      setFormSubmittedStatus(true);
     } catch (error: Error | unknown) {
       if (error instanceof Error) {
         submitButtonErrorContent(error);
@@ -209,7 +229,7 @@ const ContactForm: React.FC = () => {
       />
 
       <button type="submit" ref={$submitButton} className="my-btn">
-        Send
+        {formSubmittedStatus ? 'Thank you!' : 'Send'}
       </button>
     </form>
   );
