@@ -90,27 +90,20 @@ const ContactForm: React.FC = () => {
     }
   }, [formContent]);
 
-  // ! This approach needs to be refactored.
-  // ! in order to only update the value from the triggered input.
-  // ! thus avoiding to update all the inputs values.
-  const updateFormContent = () => {
-    const newFormContent = Object.entries(inputs).reduce(
-      (acc, [inputName, inputValue]) => {
-        const inputKeyInFormContent = inputName as keyof typeof formContent;
-        if (inputKeyInFormContent) {
-          acc[inputKeyInFormContent] = inputValue.obj.current?.value;
-        }
-        return acc;
-      },
-      {} as typeof formContent,
-    );
+  const updateFormContent = (input: any) => () => {
+    const inputKey = input.obj.current?.name as keyof typeof inputs;
 
-    setFormContent(newFormContent);
+    setFormContent((previousFormContent: any) => {
+      const currentFormContent = { ...previousFormContent };
+      currentFormContent[inputKey] = input.obj.current?.value;
+
+      return currentFormContent;
+    });
   };
 
   useEffect(() => {
     Object.values(inputs).forEach((input) => {
-      input.obj.current?.addEventListener('blur', updateFormContent);
+      input.obj.current?.addEventListener('blur', updateFormContent(input));
 
       return () => {
         input.obj.current?.removeEventListener('blur', updateFormContent);
@@ -130,8 +123,11 @@ const ContactForm: React.FC = () => {
         if (inputKeyInValidInputsPattern) {
           const inputObjDomElement = input.obj.current;
           if (inputObjDomElement) {
-            // * assign the value from sessionStorage to the input.
-            inputObjDomElement.value = formContent[inputKeyInValidInputsPattern];
+            // * assign the value from sessionStorage to the input,
+            // * as long as the value is not undefined.
+            if (formContent[inputKeyInValidInputsPattern]) {
+              inputObjDomElement.value = formContent[inputKeyInValidInputsPattern];
+            }
             validateInput(
               input,
               validInputsPattern[inputKeyInValidInputsPattern],
