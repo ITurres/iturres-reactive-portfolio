@@ -22,6 +22,7 @@ $color2-hover: colors.$color2-hover;
   width: 100%;
   padding: 3rem 1rem;
   text-align: center;
+  user-select: none;
 
   span {
     font-size: 1.2rem;

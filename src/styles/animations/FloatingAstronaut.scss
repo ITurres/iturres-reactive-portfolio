@@ -21,6 +21,7 @@ body:has(.floating-astronaut) {
     infinite; /* Opera 12+ */
 
   animation: floating-astronaut-move var(--animationSpeed) ease-in-out infinite; /* IE 10+, Fx 29+ */
+  user-select: none;
 }
 
 @-webkit-keyframes floating-astronaut-move {
