@@ -13,11 +13,13 @@ $dark: colors.$dark;
 $font-family-bold: fonts.$font-family-bold;
 $font-family-regular: fonts.$font-family-regular;
 
-.bg--container {
-  background: url('../../assets/images/bg/expertise-page-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.expertise-summary-page-bg--container {
+  @include mixins.background-image(
+    '../assets/images/bg/expertise-page-bg.jpg',
+    cover,
+    center,
+    no-repeat
+  );
 }
 
 .expertise {
@@ -29,7 +31,7 @@ $font-family-regular: fonts.$font-family-regular;
     // * top
     1,
     // * bottom
-    -2 // * bottom-desktop
+    0 // * bottom-desktop
   );
 
   display: flex;
@@ -38,8 +40,8 @@ $font-family-regular: fonts.$font-family-regular;
   min-height: 100vh;
 
   &__card {
-    min-width: 300px;
-    max-width: 400px;
+    min-width: 250px;
+    max-width: 350px;
     margin: 1rem;
     padding: 1rem;
     border: 2px solid rgba(255, 255, 255, 0.042);
@@ -51,7 +53,7 @@ $font-family-regular: fonts.$font-family-regular;
 
     h2 {
       color: $color1;
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       font-family: $font-family-bold;
       font-style: oblique;
       margin: 0.5rem;
@@ -64,7 +66,7 @@ $font-family-regular: fonts.$font-family-regular;
 
     span {
       color: $color2;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-family: $font-family-regular;
       margin: 0.3rem;
       padding: 0.5rem;
@@ -78,8 +80,8 @@ $font-family-regular: fonts.$font-family-regular;
 
     .square-item {
       background-color: $color1;
-      height: 40px;
-      width: 40px;
+      height: 35px;
+      width: 35px;
       margin-top: 1rem;
       margin-left: 1rem;
       border-radius: 0.5rem;
@@ -95,6 +97,9 @@ $font-family-regular: fonts.$font-family-regular;
   }
 
   @media (min-width: 1366px) {
+    flex-direction: row;
+    padding-left: 6rem;
+
     &__card {
       h2 {
         text-align: end;
@@ -112,6 +117,7 @@ $font-family-regular: fonts.$font-family-regular;
 
     .squares--container {
       justify-content: flex-end;
+      padding-right: 0.7rem;
 
       .square-item {
         border-left: none;
