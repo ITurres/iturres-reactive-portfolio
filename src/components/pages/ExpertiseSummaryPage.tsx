@@ -5,7 +5,7 @@ import expertiseData from '../../db/expertiseSummary.json';
 import '../../styles/pages/ExpertiseSummaryPage.scss';
 
 const ExpertiseSummaryPage: React.FC = () => (
-  <div className="bg--container">
+  <div className="expertise-summary-page-bg--container">
     <div className="blend-in-out">
       <main className="expertise container ">
         {Object.entries(expertiseData).map((expertiseSummary) => {
