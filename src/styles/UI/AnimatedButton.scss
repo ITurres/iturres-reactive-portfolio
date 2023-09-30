@@ -29,7 +29,7 @@ $dark: colors.$dark;
     left: 0;
     width: 150%;
     height: 100%;
-    background: #ffc107;
+    background: $color2-hover;
     transform-origin: left;
     transform: translateX(-100%) skewX(-15deg);
     transition: 0.5s;
