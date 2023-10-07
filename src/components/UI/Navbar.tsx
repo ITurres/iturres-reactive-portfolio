@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
           </a>
         </li>
         <li style={{ '--elem': 3 } as CSSProperties}>
-          <Link to="/homepage">
+          <Link to="/homepage/projects">
             <FaProjectDiagram
               size={iconSize}
               className="text-hue-rotate"
