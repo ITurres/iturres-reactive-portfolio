@@ -1,306 +1,35 @@
 {
-  "group1": [
-    {
-      "id": "312fe83b-8657-4602-93d1-98b2c8182f73",
-      "data": {
-        "img": {
-          "src": "youtube-clone-preview.JPG",
-          "alt": "youtube clone preview"
-        },
-        "name": {
-          "name1": "Youtube Clone",
-          "name2": "Layout and Styles only"
-        },
-        "description": [
-          "&#127909; The youtube clone webpage was a project to consolidate HTML",
-          "layouts as well as CSS styles, in order to fully",
-          "copy 2023's youtube video player webpage."
-        ],
-        "stack": ["JavaScript", "HTML", "CSS"],
-        "liveVersionHref": "https://iturres.github.idia_TOP/",
-        "sourceCodeHref": "https://github.com/ITurredia_TOP"
-      }
-    },
-    {
-      "id": "ec29607d-c59a-425b-8547-43f62c9d5cdf",
-      "data": {
-        "img": {
-          "src": "text-encrypter-preview.JPG",
-          "alt": "text encryptor preview"
-        },
-        "name": {
-          "name1": "Text Encryptor",
-          "name2": "Webpage"
-        },
-        "description": [
-          "&#128274; This project was a learning project for the Programming Course",
-          "provided by Oracle + Alura Latam.",
-          "The project consisted of creating a text encryption program",
-          "with JavaScript. In turn, once the logic of the program is finished",
-          "structure the page with HTML and give it life with CSS."
-        ],
-        "stack": ["JavaScript", "HTML", "CSS"],
-        "liveVersionHref": "https://iturres.github.icryptor/",
-        "sourceCodeHref": "https://github.com/ITurrecryptor"
-      }
-    },
-    {
-      "id": "067fabb8-22ab-421e-9089-45078bc3ef6f",
-      "data": {
-        "img": {
-          "src": "theDungeonsGame-preview.JPG",
-          "alt": "the dungeons game preview"
-        },
-        "name": {
-          "name1": "The Dungeons",
-          "name2": "Game"
-        },
-        "description": [
-          "&#x2694; The game is based on the Hang-Man game!.",
-          "You have 7 lives and you must guess the correct characters",
-          "that form the Winner word, for every life you lose,",
-          "there goes your extremities, if you get to form",
-          "the word before they hang you, you get King Arthur's Sword. &#x2694;"
-        ],
-        "stack": ["JavaScript", "HTML", "CSS"],
-        "liveVersionHref": "https://iturres.github.io/The-Dungeons-Game/",
-        "sourceCodeHref": "https://github.com/ITurres/The-Dungeons-Game"
-      }
-    },
-    {
-      "id": "1c045a07-140b-47ae-880a-ac0700032a2b",
-      "data": {
-        "img": {
-          "src": "portfolio1-preview.JPG",
-          "alt": "emanuel portfolio preview"
-        },
-        "name": {
-          "name1": "Emanuel Portfolio",
-          "name2": "Webpage"
-        },
-        "description": [
-          "My first Portfolio!, was a project that helped me to",
-          "understand and learn more about JavaScript, as well as",
-          "CSS animations and transitions and much more."
-        ],
-        "stack": ["JavaScript", "HTML", "CSS"],
-        "liveVersionHref": "https://iturres.github.io/Emanuel-Portfolio/",
-        "sourceCodeHref": "https://github.com/ITurres/Emanuel-Portfolio"
-      }
-    },
-    {
-      "id": "3be2acec-7816-4c17-ad63-bfe3def2fc77",
-      "data": {
-        "img": {
-          "src": "theTimeMeister-website-preview.JPG",
-          "alt": "the time meister website preview"
-        },
-        "name": {
-          "name1": "The Time Meister",
-          "name2": "E-commerce"
-        },
-        "description": [
-          "&#8986; The Time Meister e-commerce is a website that resembles",
-          "the rolex.com site, was a project to continue learning",
-          "and practicing the technologies listed above as well",
-          "as to follow an established design. &#128722;"
-        ],
-        "stack": ["JavaScript", "Node.js", "HTML", "CSS"],
-        "liveVersionHref": "https://iturres.github.io/ttm-e-commerce/",
-        "sourceCodeHref": "https://github.com/ITurres/ttm-e-commerce"
-      }
-    },
-    {
-      "id": "c73f03d2-cdaf-49dc-a52a-5a22d21cdcfb",
-      "data": {
-        "img": {
-          "src": "notes-web-app-preview.JPG",
-          "alt": "notes webb app preview"
-        },
-        "name": {
-          "name1": "Notes",
-          "name2": "Web App"
-        },
-        "description": [
-          "&#128221; “Notes” is my cs50x final project Web Application.",
-          "It is a basic web app that resembles a bit like 'Notes' from iCloud,",
-          "and where you can create an account, sign in and start creating,",
-          "updating, and deleting your notes, plus search for specific ones given their content."
-        ],
-        "stack": ["Python", "Flask", "JavaScript", "SQLite", "HTML", "CSS"],
-        "liveVersionHref": "https://www.youtube.com/watch?v=UJucGYwoDCA",
-        "sourceCodeHref": "https://github.com/ITurres/Notes-Web-App"
-      }
-    }
-  ],
-  "group2": [
-    {
-      "id": "7a8b772d-c526-4a43-bf44-1eb628a8646f",
-      "data": {
-        "img": {
-          "src": "ferrari-racing-website-preview.JPG",
-          "alt": "ferrari racing website preview"
-        },
-        "name": {
-          "name1": "Ferrari",
-          "name2": "Racing Website"
-        },
-        "description": [
-          "&#127937; Ferrari Racing Website is a mockup website to practice",
-          "markup, styles and dynamic markup injection,",
-          "Understanding Medium-fidelity wireframes,",
-          "follow written requirements (e.g. user stories), and much more."
-        ],
-        "stack": ["JavaScript", "HTML", "CSS", "Bootstrap"],
-        "liveVersionHref": "https://iturres.github.io/Ferrari-Racing-Website/",
-        "sourceCodeHref": "https://github.com/ITurres/Ferrari-Racing-Website"
-      }
-    },
-    {
-      "id": "aa4be794-d183-41e0-8fcc-469149dd5dac",
-      "data": {
-        "img": {
-          "src": "awesome-books-preview.JPG",
-          "alt": "awesome books preview"
-        },
-        "name": {
-          "name1": "Awesome Books",
-          "name2": ""
-        },
-        "description": [
-          "&#128218; A basic website that allows users to add/remove books from a list.",
-          "The learning objectives were to understand different ways to create objects, intro",
-          "to CRUD and more."
-        ],
-        "stack": ["JavaScript", "HTML", "CSS", "Bootstrap"],
-        "liveVersionHref": "https://iturres.github.io/Awesome-Books/",
-        "sourceCodeHref": "https://github.com/ITurres/Awesome-Books"
-      }
-    },
-    {
-      "id": "7c5ce6e8-7b3d-4b7b-8c33-dc681294e2a7",
-      "data": {
-        "img": {
-          "src": "task-manager-preview.JPG",
-          "alt": "task manager preview"
-        },
-        "name": {
-          "name1": "Task Manager",
-          "name2": ""
-        },
-        "description": [
-          "&#9997; Task Manager is a tool that helps to organize your day.",
-          "It simply lists the things that you need to do and allows you to mark",
-          "them as complete. &#x1F9EA; Tested with Jest &#x1F9EA;."
-        ],
-        "stack": ["JavaScript", "Jest", "HTML", "SASS", "Bootstrap"],
-        "liveVersionHref": "https://iturres.github.io/Task-Manager/dist/",
-        "sourceCodeHref": "https://github.com/ITurres/Task-Manager"
-      }
-    },
-    {
-      "id": "df5f3c8f-7bea-4218-905b-247dda4b0a4d",
-      "data": {
-        "img": {
-          "src": "leaderboard-preview.JPG",
-          "alt": "leaderboard preview"
-        },
-        "name": {
-          "name1": "Leaderboard",
-          "name2": ""
-        },
-        "description": [
-          "&#127942; The leaderboard website displays scores",
-          "submitted by different players. It also allows you to submit",
-          "your score. All data is preserved thanks to the external",
-          "&#128279; Leaderboard <strong>API</strong>."
-        ],
-        "stack": ["JavaScript", "HTML", "SASS", "Bootstrap", "API consumer"],
-        "liveVersionHref": "https://iturres.github.io/Leaderboard/dist/",
-        "sourceCodeHref": "https://github.com/ITurres/Leaderboard"
-      }
-    },
-    {
-      "id": "982d99d4-594c-4206-a215-9f96554bdf69",
-      "data": {
-        "img": {
-          "src": "tvmaze-preview.JPG",
-          "alt": "tvmaze shows website preview"
-        },
-        "name": {
-          "name1": "TVMaze",
-          "name2": "Shows"
-        },
-        "description": [
-          "&#127909; TVMaze was a Team project. An SPA website where you can see top",
-          "shows related info taken from <strong><i>TVmaze<i/> API</strong>. You can also like them",
-          "and add comments thanks to the <strong><i>Involvement</i> API</strong>."
-        ],
-        "stack": ["JavaScript", "HTML", "CSS", "Bootstrap", "API consumer"],
-        "liveVersionHref": "https://iturres.github.io/TVmaze-shows-website/dist/",
-        "sourceCodeHref": "https://github.com/ITurres/TVmaze-movies-website"
-      }
-    },
-    {
-      "id": "cd009743-4436-4b46-96e4-b85fb51560de",
-      "data": {
-        "img": {
-          "src": "math-magicians-preview.JPG",
-          "alt": "math magicians preview"
-        },
-        "name": {
-          "name1": "Math Magicians",
-          "name2": "Calculator & Quotes"
-        },
-        "description": [
-          "Math magicians &#129497; is a webapp for all fans",
-          "of mathematics. It is a Single Page App (SPA) that allows users to:",
-          "Make simple calculations and read a random learning-related quote thanks to the",
-          "<strong><i>Ninja</i> API</strong>."
-        ],
-        "stack": [
-          "React.js",
-          "JavaScript",
-          "SASS",
-          "Bootstrap",
-          "HTML",
-          "API consumer"
-        ],
-        "liveVersionHref": "https://iturres.github.io/math-magicians/",
-        "sourceCodeHref": "https://github.com/ITurres/math-magicians"
-      }
-    }
-  ],
   "group3": [
     {
-      "id": "e015361b-fe5e-444d-9958-b0aa65bf6a87",
+      "id": "5b9cb266-00e8-45fe-afe3-a65f4cd435e9",
       "data": {
         "img": {
-          "src": "bookstore-preview.JPG",
-          "alt": "bookstore cms preview"
+          "src": "finance-preview.jpg",
+          "alt": "finance web app preview"
         },
-        "name": {
-          "name1": "Bookstore CMS",
-          "name2": ""
+        "projectName": {
+          "name1": "Finance",
+          "name2": "Financial Metrics"
         },
         "description": [
-          "Bookstore CMS &#128218; An SPA that allows users to",
-          "display/add/remove books from a list using React + Redux and the",
-          "<strong>Bookstore API</strong>.",
-          "Working on this project has helped me to understand and learn more about",
-          "React Router, Redux as a whole, Redux toolkit, and much more."
+          "Finance &#128176; - A web app providing comprehensive company",
+          "data, including financial metrics such as Price, Beta, Volume Average, Market",
+          "Capitalization, Last Dividend, 52 week range, stock price change, stock price",
+          "change in percentage, Company Name, Sector, website. Features include personalized",
+          "watchlists, Mobile-friendly, easy to use, and modern design.",
+          "Powered By the <Strong>FMP Web API</strong>."
         ],
         "stack": [
           "React.js",
           "Redux",
           "JavaScript",
+          "Jest",
           "SASS",
-          "Bootstrap",
-          "HTML",
+          "React-Bootstrap",
           "API consumer"
         ],
-        "liveVersionHref": "https://iturres.github.io/bookstore-react-app/",
-        "sourceCodeHref": "https://github.com/ITurres/bookstore-react-app"
+        "liveVersionHref": "https://iturres.github.io/finance-metrics-web-app/",
+        "sourceCodeHref": "https://github.com/ITurres/finance-metrics-web-app"
       }
     },
     {
@@ -310,7 +39,7 @@
           "src": "spacex-travelers-preview.JPG",
           "alt": "spacex travelers hub preview"
         },
-        "name": {
+        "projectName": {
           "name1": "SpaceX",
           "name2": "Travelers Hub"
         },
@@ -335,35 +64,306 @@
       }
     },
     {
-      "id": "5b9cb266-00e8-45fe-afe3-a65f4cd435e9",
+      "id": "e015361b-fe5e-444d-9958-b0aa65bf6a87",
       "data": {
         "img": {
-          "src": "finance-preview.jpg",
-          "alt": "finance web app preview"
+          "src": "bookstore-preview.JPG",
+          "alt": "bookstore cms preview"
         },
-        "name": {
-          "name1": "Finance",
-          "name2": "Financial Metrics"
+        "projectName": {
+          "name1": "Bookstore CMS",
+          "name2": ""
         },
         "description": [
-          "Finance &#128176; - A web app providing comprehensive company",
-          "data, including financial metrics such as Price, Beta, Volume Average, Market",
-          "Capitalization, Last Dividend, 52 week range, stock price change, stock price",
-          "change in percentage, Company Name, Sector, website. Features include personalized",
-          "watchlists, Mobile-friendly, easy to use, and modern design.",
-          "Powered By the <Strong>FMP Web API</strong>."
+          "Bookstore CMS &#128218; An SPA that allows users to",
+          "display/add/remove books from a list using React + Redux and the",
+          "<strong>Bookstore API</strong>.",
+          "Working on this project has helped me to understand and learn more about",
+          "React Router, Redux as a whole, Redux toolkit, and much more."
         ],
         "stack": [
           "React.js",
           "Redux",
           "JavaScript",
-          "Jest",
           "SASS",
-          "React-Bootstrap",
+          "Bootstrap",
+          "HTML",
           "API consumer"
         ],
-        "liveVersionHref": "https://iturres.github.io/finance-metrics-web-app/",
-        "sourceCodeHref": "https://github.com/ITurres/finance-metrics-web-app"
+        "liveVersionHref": "https://iturres.github.io/bookstore-react-app/",
+        "sourceCodeHref": "https://github.com/ITurres/bookstore-react-app"
+      }
+    }
+  ],
+  "group2": [
+    {
+      "id": "cd009743-4436-4b46-96e4-b85fb51560de",
+      "data": {
+        "img": {
+          "src": "math-magicians-preview.JPG",
+          "alt": "math magicians preview"
+        },
+        "projectName": {
+          "name1": "Math Magicians",
+          "name2": "Calculator & Quotes"
+        },
+        "description": [
+          "Math magicians &#129497; is a webapp for all fans",
+          "of mathematics. It is a Single Page App (SPA) that allows users to:",
+          "Make simple calculations and read a random learning-related quote thanks to the",
+          "<strong><i>Ninja</i> API</strong>."
+        ],
+        "stack": [
+          "React.js",
+          "JavaScript",
+          "SASS",
+          "Bootstrap",
+          "HTML",
+          "API consumer"
+        ],
+        "liveVersionHref": "https://iturres.github.io/math-magicians/",
+        "sourceCodeHref": "https://github.com/ITurres/math-magicians"
+      }
+    },
+    {
+      "id": "982d99d4-594c-4206-a215-9f96554bdf69",
+      "data": {
+        "img": {
+          "src": "tvmaze-preview.JPG",
+          "alt": "tvmaze shows website preview"
+        },
+        "projectName": {
+          "name1": "TVMaze",
+          "name2": "Shows"
+        },
+        "description": [
+          "&#127909; TVMaze was a Team project. An SPA website where you can see top",
+          "shows related info taken from <strong><i>TVmaze<i/> API</strong>. You can also like them",
+          "and add comments thanks to the <strong><i>Involvement</i> API</strong>."
+        ],
+        "stack": ["JavaScript", "HTML", "CSS", "Bootstrap", "API consumer"],
+        "liveVersionHref": "https://iturres.github.io/TVmaze-shows-website/dist/",
+        "sourceCodeHref": "https://github.com/ITurres/TVmaze-movies-website"
+      }
+    },
+    {
+      "id": "df5f3c8f-7bea-4218-905b-247dda4b0a4d",
+      "data": {
+        "img": {
+          "src": "leaderboard-preview.JPG",
+          "alt": "leaderboard preview"
+        },
+        "projectName": {
+          "name1": "Leaderboard",
+          "name2": ""
+        },
+        "description": [
+          "&#127942; The leaderboard website displays scores",
+          "submitted by different players. It also allows you to submit",
+          "your score. All data is preserved thanks to the external",
+          "&#128279; Leaderboard <strong>API</strong>."
+        ],
+        "stack": ["JavaScript", "HTML", "SASS", "Bootstrap", "API consumer"],
+        "liveVersionHref": "https://iturres.github.io/Leaderboard/dist/",
+        "sourceCodeHref": "https://github.com/ITurres/Leaderboard"
+      }
+    },
+    {
+      "id": "7c5ce6e8-7b3d-4b7b-8c33-dc681294e2a7",
+      "data": {
+        "img": {
+          "src": "task-manager-preview.JPG",
+          "alt": "task manager preview"
+        },
+        "projectName": {
+          "name1": "Task Manager",
+          "name2": ""
+        },
+        "description": [
+          "&#9997; Task Manager is a tool that helps to organize your day.",
+          "It simply lists the things that you need to do and allows you to mark",
+          "them as complete. &#x1F9EA; Tested with Jest &#x1F9EA;."
+        ],
+        "stack": ["JavaScript", "Jest", "HTML", "SASS", "Bootstrap"],
+        "liveVersionHref": "https://iturres.github.io/Task-Manager/dist/",
+        "sourceCodeHref": "https://github.com/ITurres/Task-Manager"
+      }
+    },
+    {
+      "id": "aa4be794-d183-41e0-8fcc-469149dd5dac",
+      "data": {
+        "img": {
+          "src": "awesome-books-preview.JPG",
+          "alt": "awesome books preview"
+        },
+        "projectName": {
+          "name1": "Awesome Books",
+          "name2": ""
+        },
+        "description": [
+          "&#128218; A basic website that allows users to add/remove books from a list.",
+          "The learning objectives were to understand different ways to create objects, intro",
+          "to CRUD and more."
+        ],
+        "stack": ["JavaScript", "HTML", "CSS", "Bootstrap"],
+        "liveVersionHref": "https://iturres.github.io/Awesome-Books/",
+        "sourceCodeHref": "https://github.com/ITurres/Awesome-Books"
+      }
+    },
+    {
+      "id": "7a8b772d-c526-4a43-bf44-1eb628a8646f",
+      "data": {
+        "img": {
+          "src": "ferrari-racing-website-preview.JPG",
+          "alt": "ferrari racing website preview"
+        },
+        "projectName": {
+          "name1": "Ferrari",
+          "name2": "Racing Website"
+        },
+        "description": [
+          "&#127937; Ferrari Racing Website is a mockup website to practice",
+          "markup, styles and dynamic markup injection,",
+          "Understanding Medium-fidelity wireframes,",
+          "follow written requirements (e.g. user stories), and much more."
+        ],
+        "stack": ["JavaScript", "HTML", "CSS", "Bootstrap"],
+        "liveVersionHref": "https://iturres.github.io/Ferrari-Racing-Website/",
+        "sourceCodeHref": "https://github.com/ITurres/Ferrari-Racing-Website"
+      }
+    }
+  ],
+  "group1": [
+    {
+      "id": "c73f03d2-cdaf-49dc-a52a-5a22d21cdcfb",
+      "data": {
+        "img": {
+          "src": "notes-web-app-preview.JPG",
+          "alt": "notes webb app preview"
+        },
+        "projectName": {
+          "name1": "Notes",
+          "name2": "Web App"
+        },
+        "description": [
+          "&#128221; “Notes” is my cs50x final project Web Application.",
+          "It is a basic web app that resembles a bit like 'Notes' from iCloud,",
+          "and where you can create an account, sign in and start creating,",
+          "updating, and deleting your notes, plus search for specific ones given their content."
+        ],
+        "stack": ["Python", "Flask", "JavaScript", "SQLite", "HTML", "CSS"],
+        "liveVersionHref": "https://www.youtube.com/watch?v=UJucGYwoDCA",
+        "sourceCodeHref": "https://github.com/ITurres/Notes-Web-App"
+      }
+    },
+    {
+      "id": "3be2acec-7816-4c17-ad63-bfe3def2fc77",
+      "data": {
+        "img": {
+          "src": "theTimeMeister-website-preview.JPG",
+          "alt": "the time meister website preview"
+        },
+        "projectName": {
+          "name1": "The Time Meister",
+          "name2": "E-commerce"
+        },
+        "description": [
+          "&#8986; The Time Meister e-commerce is a website that resembles",
+          "the rolex.com site, was a project to continue learning",
+          "and practicing the technologies listed above as well",
+          "as to follow an established design. &#128722;"
+        ],
+        "stack": ["JavaScript", "Node.js", "HTML", "CSS"],
+        "liveVersionHref": "https://iturres.github.io/ttm-e-commerce/",
+        "sourceCodeHref": "https://github.com/ITurres/ttm-e-commerce"
+      }
+    },
+    {
+      "id": "1c045a07-140b-47ae-880a-ac0700032a2b",
+      "data": {
+        "img": {
+          "src": "portfolio1-preview.JPG",
+          "alt": "emanuel portfolio preview"
+        },
+        "projectName": {
+          "name1": "Emanuel Portfolio",
+          "name2": "Webpage"
+        },
+        "description": [
+          "My first Portfolio!, was a project that helped me to",
+          "understand and learn more about JavaScript, as well as",
+          "CSS animations and transitions and much more."
+        ],
+        "stack": ["JavaScript", "HTML", "CSS"],
+        "liveVersionHref": "https://iturres.github.io/Emanuel-Portfolio/",
+        "sourceCodeHref": "https://github.com/ITurres/Emanuel-Portfolio"
+      }
+    },
+    {
+      "id": "067fabb8-22ab-421e-9089-45078bc3ef6f",
+      "data": {
+        "img": {
+          "src": "theDungeonsGame-preview.JPG",
+          "alt": "the dungeons game preview"
+        },
+        "projectName": {
+          "name1": "The Dungeons",
+          "name2": "Game"
+        },
+        "description": [
+          "&#x2694; The game is based on the Hang-Man game!.",
+          "You have 7 lives and you must guess the correct characters",
+          "that form the Winner word, for every life you lose,",
+          "there goes your extremities, if you get to form",
+          "the word before they hang you, you get King Arthur's Sword. &#x2694;"
+        ],
+        "stack": ["JavaScript", "HTML", "CSS"],
+        "liveVersionHref": "https://iturres.github.io/The-Dungeons-Game/",
+        "sourceCodeHref": "https://github.com/ITurres/The-Dungeons-Game"
+      }
+    },
+    {
+      "id": "ec29607d-c59a-425b-8547-43f62c9d5cdf",
+      "data": {
+        "img": {
+          "src": "text-encrypter-preview.JPG",
+          "alt": "text encryptor preview"
+        },
+        "projectName": {
+          "name1": "Text Encryptor",
+          "name2": "Webpage"
+        },
+        "description": [
+          "&#128274; This project was a learning project for the Programming Course",
+          "provided by Oracle + Alura Latam.",
+          "The project consisted of creating a text encryption program",
+          "with JavaScript. In turn, once the logic of the program is finished",
+          "structure the page with HTML and give it life with CSS."
+        ],
+        "stack": ["JavaScript", "HTML", "CSS"],
+        "liveVersionHref": "https://iturres.github.io/Project_Encryptor/",
+        "sourceCodeHref": "https://github.com/ITurres/Project_Encryptor"
+      }
+    },
+    {
+      "id": "312fe83b-8657-4602-93d1-98b2c8182f73",
+      "data": {
+        "img": {
+          "src": "youtube-clone-preview.JPG",
+          "alt": "youtube clone preview"
+        },
+        "projectName": {
+          "name1": "Youtube Clone",
+          "name2": "Layout and Styles only"
+        },
+        "description": [
+          "&#127909; The youtube clone webpage was a project to consolidate HTML",
+          "layouts as well as CSS styles, in order to fully",
+          "copy 2023's youtube video player webpage."
+        ],
+        "stack": ["JavaScript", "HTML", "CSS"],
+        "liveVersionHref": "https://iturres.github.io/project_media_TOP/",
+        "sourceCodeHref": "https://github.com/ITurres/project_media_TOP"
       }
     }
   ]
