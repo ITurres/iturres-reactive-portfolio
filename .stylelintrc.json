@@ -14,7 +14,9 @@
           "mixin",
           "include",
           "use",
-          "forward"
+          "forward",
+          "if",
+          "else"
         ]
       }
     ],
