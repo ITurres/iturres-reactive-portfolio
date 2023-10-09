@@ -12,7 +12,7 @@
           "name2": "Financial Metrics"
         },
         "description": [
-          "Finance &#128176; - A web app providing comprehensive company",
+          "Finance - A web app providing comprehensive company",
           "data, including financial metrics such as Price, Beta, Volume Average, Market",
           "Capitalization, Last Dividend, 52 week range, stock price change, stock price",
           "change in percentage, Company Name, Sector, website. Features include personalized",
@@ -44,10 +44,10 @@
           "name2": "Travelers Hub"
         },
         "description": [
-          "SpaceX Travelers Hub &#128640; - A web application for a",
+          "SpaceX Travelers Hub - A web application for a",
           "company that provides commercial and scientific space travel services.",
           "The application will allow users to book Rockets and join selected",
-          "Space Missions. Powered By the <strong>SpaceX Web API</strong>."
+          "Space Missions. Powered By the SpaceX Web API."
         ],
         "stack": [
           "React.js",
@@ -75,9 +75,9 @@
           "name2": ""
         },
         "description": [
-          "Bookstore CMS &#128218; An SPA that allows users to",
+          "Bookstore CMS An SPA that allows users to",
           "display/add/remove books from a list using React + Redux and the",
-          "<strong>Bookstore API</strong>.",
+          "Bookstore API.",
           "Working on this project has helped me to understand and learn more about",
           "React Router, Redux as a whole, Redux toolkit, and much more."
         ],
@@ -108,10 +108,10 @@
           "name2": "Calculator & Quotes"
         },
         "description": [
-          "Math magicians &#129497; is a webapp for all fans",
+          "Math magicians is a webapp for all fans",
           "of mathematics. It is a Single Page App (SPA) that allows users to:",
           "Make simple calculations and read a random learning-related quote thanks to the",
-          "<strong><i>Ninja</i> API</strong>."
+          "Ninja API."
         ],
         "stack": [
           "React.js",
@@ -137,9 +137,9 @@
           "name2": "Shows"
         },
         "description": [
-          "&#127909; TVMaze was a Team project. An SPA website where you can see top",
-          "shows related info taken from <strong><i>TVmaze<i/> API</strong>. You can also like them",
-          "and add comments thanks to the <strong><i>Involvement</i> API</strong>."
+          "TVMaze was a Team project. An SPA website where you can see top",
+          "shows related info taken from TVmaze API. You can also like them",
+          "and add comments thanks to the Involvement API."
         ],
         "stack": ["JavaScript", "HTML", "CSS", "Bootstrap", "API consumer"],
         "liveVersionHref": "https://iturres.github.io/TVmaze-shows-website/dist/",
@@ -158,10 +158,10 @@
           "name2": ""
         },
         "description": [
-          "&#127942; The leaderboard website displays scores",
+          "The leaderboard website displays scores",
           "submitted by different players. It also allows you to submit",
           "your score. All data is preserved thanks to the external",
-          "&#128279; Leaderboard <strong>API</strong>."
+          "Leaderboard API."
         ],
         "stack": ["JavaScript", "HTML", "SASS", "Bootstrap", "API consumer"],
         "liveVersionHref": "https://iturres.github.io/Leaderboard/dist/",
@@ -180,9 +180,9 @@
           "name2": ""
         },
         "description": [
-          "&#9997; Task Manager is a tool that helps to organize your day.",
+          "Task Manager is a tool that helps to organize your day.",
           "It simply lists the things that you need to do and allows you to mark",
-          "them as complete. &#x1F9EA; Tested with Jest &#x1F9EA;."
+          "them as complete. Tested with Jest."
         ],
         "stack": ["JavaScript", "Jest", "HTML", "SASS", "Bootstrap"],
         "liveVersionHref": "https://iturres.github.io/Task-Manager/dist/",
@@ -201,7 +201,7 @@
           "name2": ""
         },
         "description": [
-          "&#128218; A basic website that allows users to add/remove books from a list.",
+          "A basic website that allows users to add/remove books from a list.",
           "The learning objectives were to understand different ways to create objects, intro",
           "to CRUD and more."
         ],
@@ -222,7 +222,7 @@
           "name2": "Racing Website"
         },
         "description": [
-          "&#127937; Ferrari Racing Website is a mockup website to practice",
+          "Ferrari Racing Website is a mockup website to practice",
           "markup, styles and dynamic markup injection,",
           "Understanding Medium-fidelity wireframes,",
           "follow written requirements (e.g. user stories), and much more."
@@ -246,7 +246,7 @@
           "name2": "Web App"
         },
         "description": [
-          "&#128221; “Notes” is my cs50x final project Web Application.",
+          "“Notes” is my cs50x final project Web Application.",
           "It is a basic web app that resembles a bit like 'Notes' from iCloud,",
           "and where you can create an account, sign in and start creating,",
           "updating, and deleting your notes, plus search for specific ones given their content."
@@ -268,10 +268,10 @@
           "name2": "E-commerce"
         },
         "description": [
-          "&#8986; The Time Meister e-commerce is a website that resembles",
+          "The Time Meister e-commerce is a website that resembles",
           "the rolex.com site, was a project to continue learning",
           "and practicing the technologies listed above as well",
-          "as to follow an established design. &#128722;"
+          "as to follow an established design."
         ],
         "stack": ["JavaScript", "Node.js", "HTML", "CSS"],
         "liveVersionHref": "https://iturres.github.io/ttm-e-commerce/",
@@ -311,11 +311,11 @@
           "name2": "Game"
         },
         "description": [
-          "&#x2694; The game is based on the Hang-Man game!.",
+          "The game is based on the Hang-Man game!.",
           "You have 7 lives and you must guess the correct characters",
           "that form the Winner word, for every life you lose,",
           "there goes your extremities, if you get to form",
-          "the word before they hang you, you get King Arthur's Sword. &#x2694;"
+          "the word before they hang you, you get King Arthur's Sword."
         ],
         "stack": ["JavaScript", "HTML", "CSS"],
         "liveVersionHref": "https://iturres.github.io/The-Dungeons-Game/",
@@ -334,7 +334,7 @@
           "name2": "Webpage"
         },
         "description": [
-          "&#128274; This project was a learning project for the Programming Course",
+          "This project was a learning project for the Programming Course",
           "provided by Oracle + Alura Latam.",
           "The project consisted of creating a text encryption program",
           "with JavaScript. In turn, once the logic of the program is finished",
@@ -357,7 +357,7 @@
           "name2": "Layout and Styles only"
         },
         "description": [
-          "&#127909; The youtube clone webpage was a project to consolidate HTML",
+          "The youtube clone webpage was a project to consolidate HTML",
           "layouts as well as CSS styles, in order to fully",
           "copy 2023's youtube video player webpage."
         ],
