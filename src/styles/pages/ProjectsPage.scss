@@ -1,0 +1,149 @@
+@use '../mixins' as mixins;
+@use '../variables/colors' as colors;
+@use '../variables/fonts' as fonts;
+
+@forward '../animations/text-hue-rotate.scss';
+
+$color1: colors.$color1;
+$color2-hover: colors.$color2-hover;
+
+$transparent-grey: rgba(255, 255, 255, 0.073);
+
+$font-family-regular: fonts.$font-family-regular;
+
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include mixins.component-code-snippet(
+    'const Projects = () => {',
+    colors.$color1,
+    colors.$color1
+  );
+
+  min-height: 100vh;
+
+  // ! START of Splide Styles overrides.
+
+  .splide__list {
+    padding: 5rem 0 !important;
+  }
+
+  .splide__arrow {
+    border: 2px solid $color1;
+    background-color: transparent;
+
+    svg {
+      fill: $color1;
+
+      &:hover {
+        fill: $color2-hover;
+      }
+    }
+  }
+
+  .splide__pagination__page {
+    background-color: $color1;
+
+    &.is-active {
+      background-color: $color2-hover;
+    }
+  }
+
+  .splide__track--nav > .splide__list > .splide__slide.is-active {
+    border: 3px solid transparent;
+  }
+
+  .splide__slide__img {
+    border-radius: 0.2rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  // ! END of Splide Styles overrides.
+
+  .splide__slide__container {
+    .splide__slide__overlay {
+      padding: 0.5rem 0.6rem;
+      margin: 0.7rem 0;
+
+      h2 {
+        font-size: 1.5rem;
+        color: $color1;
+        font-style: oblique;
+        font-family: $font-family-regular;
+        text-align: center;
+      }
+
+      details {
+        summary {
+          color: $color2-hover;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: $color1;
+          }
+        }
+
+        p {
+          padding-top: 1rem;
+          font-family: 'Jura', sans-serif;
+        }
+      }
+
+      &__text__stack {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+
+        span {
+          color: $color2-hover;
+          font-size: 0.8rem;
+          margin: 0.2rem;
+          padding: 0.3rem;
+          border-radius: 0.5rem;
+          background-color: $transparent-grey;
+        }
+      }
+
+      &__text__links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        padding: 0 0.5rem;
+        border-left: 2px solid red;
+        border-right: 2px solid red;
+        border-radius: 0.5rem;
+        width: max-content;
+
+        a {
+          color: $color2-hover;
+          font-style: oblique;
+          font-size: 0.8rem;
+          margin: 0.2rem auto;
+          padding: 0.5rem 1rem;
+          border-radius: 0.5rem;
+          background-color: $transparent-grey;
+          transition: all 0.2s ease-in-out;
+          text-decoration: none;
+
+          &:hover {
+            color: $color1;
+            padding-bottom: 0.5rem;
+
+            &:nth-child(1) {
+              border-right: 2px solid red;
+            }
+
+            &:nth-child(2) {
+              border-left: 2px solid red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
