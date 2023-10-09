@@ -1,14 +1,16 @@
 @forward 'base/normalize.css';
 @forward 'UI/button.scss';
-@forward 'UI/LineCount.scss';
+@forward 'UI/LineCount.scss'; // * LineCount is a component that is present and should be styled in all pages.
 
 @use './variables/colors' as colors;
 @use './variables/fonts' as fonts;
+@use './mixins' as mixins;
 
 $font-family-light: fonts.$font-family-light;
 
 $dark: colors.$dark;
 $light: colors.$light;
+$light-gray: colors.$light-gray;
 
 @font-face {
   font-family: 'RolexFont-Bold';
@@ -29,4 +31,6 @@ body {
   background-color: $dark;
   color: $light;
   font-family: $font-family-light;
+
+  @include mixins.styled-scrollbar($light-gray, $dark, 0.5rem, 0, 1rem);
 }
