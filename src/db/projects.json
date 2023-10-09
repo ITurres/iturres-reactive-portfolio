@@ -17,7 +17,7 @@
           "Capitalization, Last Dividend, 52 week range, stock price change, stock price",
           "change in percentage, Company Name, Sector, website. Features include personalized",
           "watchlists, Mobile-friendly, easy to use, and modern design.",
-          "Powered By the <Strong>FMP Web API</strong>."
+          "Powered By the FMP Web API."
         ],
         "stack": [
           "React.js",
