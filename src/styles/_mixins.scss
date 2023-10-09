@@ -53,3 +53,33 @@
     background-repeat: $repeat;
   }
 }
+
+@mixin styled-scrollbar(
+  $thumb-color: inherit,
+  $scrollbar-color,
+  $width: 0.5rem,
+  $radius: 0,
+  $radius-left: 0
+) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scrollbar-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumb-color;
+    border-radius: $radius;
+
+    @if ($radius-left > 0) {
+      border-top-left-radius: $radius-left;
+      border-bottom-left-radius: $radius-left;
+    }
+
+    &:active {
+      background: lighten($thumb-color, 20%);
+    }
+  }
+}
