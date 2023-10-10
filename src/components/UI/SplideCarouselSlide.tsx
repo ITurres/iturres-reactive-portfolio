@@ -2,6 +2,8 @@ import React from 'react';
 
 import { SplideSlide } from '@splidejs/react-splide';
 
+import LikeButton from './LikeButton.tsx';
+
 /* eslint-disable no-undef */
 interface SplideCarouselSlideProps {
   projectData: {
@@ -40,10 +42,13 @@ const SplideCarouselSlide: React.FC<SplideCarouselSlideProps> = ({
             <br />
             {projectData.data.projectName.name2}
           </h2>
-          <details>
-            <summary>Description</summary>
-            <p>{projectData.data.description.join(' ')}</p>
-          </details>
+          <div className="d-flex justify-content-between align-items-start flex-wrap">
+            <details>
+              <summary>Description</summary>
+              <p>{projectData.data.description.join(' ')}</p>
+            </details>
+            <LikeButton itemId={projectData.id} />
+          </div>
           <div className="splide__slide__overlay__text__stack text-hue-rotate">
             {projectData.data.stack.map((stackItem) => (
               <span key={stackItem}>
