@@ -12,7 +12,6 @@ const postLike = async (itemId: string) => {
       }),
       redirect: 'follow',
     });
-    console.log(response);
 
     if (!response.ok) return 'error';
 
