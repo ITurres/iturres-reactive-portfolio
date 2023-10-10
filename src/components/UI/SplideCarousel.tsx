@@ -24,8 +24,7 @@ const SplideCarousel: React.FC<SplideCarouselProps> = ({ projectsGroup }) => (
         height: '50%',
         gap: '1rem',
         cover: false,
-        isNavigation: true,
-        focus: 'center',
+        isNavigation: false,
         pagination: true,
         mediaQuery: 'max',
         breakpoints: {
