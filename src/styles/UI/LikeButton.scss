@@ -1,0 +1,30 @@
+@use '../variables/colors' as colors;
+
+@forward '../animations/text-hue-rotate.scss';
+
+$color1: colors.$color1;
+$color2-hover: colors.$color2-hover;
+$light-gray: colors.$light-gray;
+$dark: colors.$dark;
+
+.like-button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: $color1;
+  background-color: $dark;
+  border: 1px solid $color1;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: rgba($color1, 0.1);
+    border: 1px solid lighten($color1, 20%);
+  }
+
+  &.liked {
+    box-shadow: 0 0 0.8rem $color1 inset;
+  }
+
+  .like-icon {
+    color: $color2-hover;
+  }
+}
