@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ITurres/top-s/tree/development/static/css/main.342bf634.css",
+    "main.js": "/ITurres/top-s/tree/development/static/js/main.0daa2369.js",
+    "static/media/portfolio-access-animation-2-short.mp4": "/ITurres/top-s/tree/development/static/media/portfolio-access-animation-2-short.e5525f47ce2d136f41d6.mp4",
+    "static/media/portfolio-access-animation-2-short.webm": "/ITurres/top-s/tree/development/static/media/portfolio-access-animation-2-short.4fbfaf5a0a94d9bfdf4f.webm",
+    "static/media/futuristic-sci-fi-3d-illustration-bg.jpg": "/ITurres/top-s/tree/development/static/media/futuristic-sci-fi-3d-illustration-bg.08b4f401463cdb1393c4.jpg",
+    "static/media/portfolio-access-bg.png": "/ITurres/top-s/tree/development/static/media/portfolio-access-bg.d197954fb9649ad594d8.png",
+    "static/media/homepage-dots-img.png": "/ITurres/top-s/tree/development/static/media/homepage-dots-img.286029ae7df9d43e3138.png",
+    "static/media/floatingAstronaut.gif": "/ITurres/top-s/tree/development/static/media/floatingAstronaut.445ec3f2d1237f5e8cf8.gif",
+    "static/media/drone.gif": "/ITurres/top-s/tree/development/static/media/drone.ef40bfb16cc8c7bc1e86.gif",
+    "static/media/expertise-page-bg.jpg": "/ITurres/top-s/tree/development/static/media/expertise-page-bg.f9c5642dbabc8638a6d9.jpg",
+    "static/media/profile.png": "/ITurres/top-s/tree/development/static/media/profile.8e9e271dd2bbfa152f89.png",
+    "static/media/RolexFont-Bold-WebS.woff2": "/ITurres/top-s/tree/development/static/media/RolexFont-Bold-WebS.1c90d1a3503f35cb5f28.woff2",
+    "static/media/RolexFont-Regular-WebS.woff2": "/ITurres/top-s/tree/development/static/media/RolexFont-Regular-WebS.1042fbdf6c113e6dac21.woff2",
+    "static/media/RolexFont-Light-WebS.woff2": "/ITurres/top-s/tree/development/static/media/RolexFont-Light-WebS.abd5c539d0d3d699e896.woff2",
+    "index.html": "/ITurres/top-s/tree/development/index.html",
+    "main.342bf634.css.map": "/ITurres/top-s/tree/development/static/css/main.342bf634.css.map",
+    "main.0daa2369.js.map": "/ITurres/top-s/tree/development/static/js/main.0daa2369.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.342bf634.css",
+    "static/js/main.0daa2369.js"
+  ]
+}
