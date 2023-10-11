@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/top-s/static/css/main.1692bb8b.css",
-    "main.js": "/top-s/static/js/main.dc1bdf70.js",
+    "main.js": "/top-s/static/js/main.527f2f13.js",
     "static/media/portfolio-access-animation-2-short.mp4": "/top-s/static/media/portfolio-access-animation-2-short.e5525f47ce2d136f41d6.mp4",
     "static/media/portfolio-access-animation-2-short.webm": "/top-s/static/media/portfolio-access-animation-2-short.4fbfaf5a0a94d9bfdf4f.webm",
     "static/media/futuristic-sci-fi-3d-illustration-bg.jpg": "/top-s/static/media/futuristic-sci-fi-3d-illustration-bg.08b4f401463cdb1393c4.jpg",
@@ -16,10 +16,10 @@
     "static/media/RolexFont-Light-WebS.woff2": "/top-s/static/media/RolexFont-Light-WebS.abd5c539d0d3d699e896.woff2",
     "index.html": "/top-s/index.html",
     "main.1692bb8b.css.map": "/top-s/static/css/main.1692bb8b.css.map",
-    "main.dc1bdf70.js.map": "/top-s/static/js/main.dc1bdf70.js.map"
+    "main.527f2f13.js.map": "/top-s/static/js/main.527f2f13.js.map"
   },
   "entrypoints": [
     "static/css/main.1692bb8b.css",
-    "static/js/main.dc1bdf70.js"
+    "static/js/main.527f2f13.js"
   ]
 }
