@@ -30,9 +30,17 @@ const LikeButton: React.FC<LikeButtonProps> = ({ itemId }) => {
     }
   }, [wasLiked]);
 
+  interface Like {
+    // * disable camelcase since 'item_id' is the name of the property in the API response.
+    // eslint-disable-next-line camelcase
+    item_id: string;
+    likes: number;
+  }
+
   const updateLikeCount = async () => {
-    const likes = await involvement.getLikes().then((likesData) => likesData);
-    const likedProject = likes.find((like: any) => like.item_id === itemId);
+    const likes: Like[] = (await involvement.getLikes()) as Like[];
+
+    const likedProject = likes.find((like) => like.item_id === itemId);
 
     if (likedProject) {
       setLikeCount(likedProject.likes);
