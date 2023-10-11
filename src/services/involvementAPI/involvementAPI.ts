@@ -30,8 +30,15 @@ const getLikes = async () => {
 
     if (!response.ok) return [];
 
-    const likes = await response.json();
-    return likes;
+    // * Only parse the response if it's JSON.
+    // * specially when the involvementAPI : 'appId' is new, the response to be parsed wont be JSON.
+    const contentType = response.headers.get('Content-Type');
+    if (contentType && contentType.includes('application/json')) {
+      const likes = await response.json();
+      if (likes instanceof Array) return likes;
+    }
+
+    return [];
   } catch (error) {
     return error;
   }
