@@ -32,7 +32,7 @@ const SplideCarouselSlide: React.FC<SplideCarouselSlideProps> = ({
     <div className="splide__slide__container">
       <img
         className="splide__slide__img"
-        src={`/projects-preview/${projectData.data.img.src}`}
+        src={`${process.env.PUBLIC_URL}/projects-preview/${projectData.data.img.src}`}
         alt={projectData.data.img.alt}
       />
       <div className="splide__slide__overlay">
