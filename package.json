@@ -2,7 +2,7 @@
   "name": "reactive-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://iturres.github.io/top-s",
+  "homepage": "https://iturres.github.io/iturres-reactive-portfolio",
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
     "axios": "^1.4.0",

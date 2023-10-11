@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
       </button>
       <ul>
         <li style={{ '--elem': 0 } as CSSProperties}>
-          <Link to="/homepage">
+          <Link to="/iturres-reactive-portfolio/homepage">
             <SiAboutdotme
               size={iconSize}
               className="text-hue-rotate"
@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
           </a>
         </li>
         <li style={{ '--elem': 3 } as CSSProperties}>
-          <Link to="/homepage/projects">
+          <Link to="/iturres-reactive-portfolio/homepage/projects">
             <FaProjectDiagram
               size={iconSize}
               className="text-hue-rotate"
@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
           </Link>
         </li>
         <li style={{ '--elem': 4 } as CSSProperties}>
-          <Link to="/homepage/contact">
+          <Link to="/iturres-reactive-portfolio/homepage/contact">
             <AiOutlineMail
               size={iconSize}
               className="text-hue-rotate"
@@ -83,12 +83,12 @@ const Navbar: React.FC = () => {
           </Link>
         </li>
         <li style={{ '--elem': 5 } as CSSProperties}>
-          <Link to="/">
+          <Link to="/iturres-reactive-portfolio/">
             <BiExit size={iconSize} className="text-hue-rotate" title="Exit" />
           </Link>
         </li>
         <li style={{ '--elem': 6 } as CSSProperties}>
-          <Link to="/homepage/expertise">
+          <Link to="/iturres-reactive-portfolio/homepage/expertise">
             <LuSquareStack
               size={iconSize}
               className="text-hue-rotate"

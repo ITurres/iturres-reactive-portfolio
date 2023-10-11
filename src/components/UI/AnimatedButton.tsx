@@ -9,13 +9,22 @@ const AnimatedButton: React.FC = () => (
     className="animated-button my-btn"
     aria-label="navigates to expertise page"
   >
-    <Link to="/homepage/expertise" className="text-hue-rotate">
+    <Link
+      to="/iturres-reactive-portfolio/homepage/expertise"
+      className="text-hue-rotate"
+    >
       languages
     </Link>
-    <Link to="/homepage/expertise" className="text-hue-rotate">
+    <Link
+      to="/iturres-reactive-portfolio/homepage/expertise"
+      className="text-hue-rotate"
+    >
       frameworks
     </Link>
-    <Link to="/homepage/expertise" className="text-hue-rotate">
+    <Link
+      to="/iturres-reactive-portfolio/homepage/expertise"
+      className="text-hue-rotate"
+    >
       skills
     </Link>
   </button>
