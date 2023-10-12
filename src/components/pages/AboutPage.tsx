@@ -6,8 +6,12 @@ import '../../styles/pages/AboutPage.scss';
 
 import AnimatedButton from '../UI/AnimatedButton.tsx';
 
+import setPageTitle from '../../utils/setPageTitle.ts';
+
 const AboutPage: React.FC = () => {
   const $aboutPage = useRef<HTMLElement>(null);
+
+  setPageTitle('About me 🙋‍♂️');
 
   useEffect(() => {
     if ($aboutPage.current) {
@@ -24,10 +28,12 @@ const AboutPage: React.FC = () => {
           <span className="emoji">&#128075;</span>
         </h1>
         <p className="aboutPage__about-p">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse,
-          suscipit et? Quo facere fugiat deserunt expedita pariatur consequuntur
-          quos possimus quidem repellat ipsam sequi, mollitia perspiciatis
-          suscipit id ipsa voluptates.
+          I excel in remote collaboration, driven by a robust skill set
+          developed through daily coding with global teams. I&apos;m adept at
+          meeting tight deadlines and experienced in diverse tech stacks like
+          React, Redux, TypeScript, JavaScript, SASS, CSS, HTML and more. My
+          adaptability, honed by international living experiences, enables me to
+          collaborate with diverse teams across the world seamlessly.
         </p>
         <AnimatedButton />
       </div>

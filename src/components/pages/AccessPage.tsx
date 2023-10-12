@@ -8,6 +8,8 @@ import '../../styles/animations/shrink-and-center.scss';
 import AccessPageVideo from '../animations/AccessPageVideo.tsx';
 import FloatingAstronaut from '../animations/FloatingAstronaut.tsx';
 
+import setPageTitle from '../../utils/setPageTitle.ts';
+
 const AstronautStyleProps = {
   animationSpeed: 30,
   maxWidth: 150,
@@ -29,6 +31,8 @@ const AccessPage = () => {
   const $videoElement = useRef<HTMLVideoElement>(null);
   const navigate = useNavigate();
 
+  setPageTitle('Access 👨‍🚀');
+
   const handleMainElementAnimations = () => {
     if ($accessPageMain.current) {
       $accessPageMain.current.classList.remove('text-hue-rotate');
@@ -42,6 +46,7 @@ const AccessPage = () => {
         if ($videoElement.current) {
           $videoElement.current.style.display = 'block';
           $videoElement.current.play();
+          setPageTitle('🚀..........');
         }
       }, 200);
 

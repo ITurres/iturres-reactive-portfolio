@@ -5,9 +5,13 @@ import '../../styles/pages/ContactPage.scss';
 import Drone from '../animations/Drone.tsx';
 import ContactForm from '../UI/ContactForm.tsx';
 
+import setPageTitle from '../../utils/setPageTitle.ts';
+
 const ContactPage: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const laptopWidth = 1366;
+
+  setPageTitle('Contact me! 📲');
 
   useEffect(() => {
     const handleResize = () => {
