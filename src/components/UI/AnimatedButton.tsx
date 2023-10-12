@@ -27,6 +27,14 @@ const AnimatedButton: React.FC = () => (
     >
       skills
     </Link>
+    <a
+      href="https://docs.google.com/document/d/1vfOALwpILAh8Jn29zV6aO6jwuGZQwLyYjRb3_YKZfQ0/edit?usp=sharing"
+      className="text-hue-rotate"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      resume
+    </a>
   </button>
 );
 
