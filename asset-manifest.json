@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/iturres-reactive-portfolio/static/css/main.9e72c987.css",
-    "main.js": "/iturres-reactive-portfolio/static/js/main.a8738722.js",
+    "main.css": "/iturres-reactive-portfolio/static/css/main.f0d38b4e.css",
+    "main.js": "/iturres-reactive-portfolio/static/js/main.0f377800.js",
     "static/media/portfolio-access-animation-2-short.mp4": "/iturres-reactive-portfolio/static/media/portfolio-access-animation-2-short.e5525f47ce2d136f41d6.mp4",
     "static/media/portfolio-access-animation-2-short.webm": "/iturres-reactive-portfolio/static/media/portfolio-access-animation-2-short.4fbfaf5a0a94d9bfdf4f.webm",
     "static/media/futuristic-sci-fi-3d-illustration-bg.jpg": "/iturres-reactive-portfolio/static/media/futuristic-sci-fi-3d-illustration-bg.08b4f401463cdb1393c4.jpg",
@@ -15,11 +15,11 @@
     "static/media/RolexFont-Regular-WebS.woff2": "/iturres-reactive-portfolio/static/media/RolexFont-Regular-WebS.1042fbdf6c113e6dac21.woff2",
     "static/media/RolexFont-Light-WebS.woff2": "/iturres-reactive-portfolio/static/media/RolexFont-Light-WebS.abd5c539d0d3d699e896.woff2",
     "index.html": "/iturres-reactive-portfolio/index.html",
-    "main.9e72c987.css.map": "/iturres-reactive-portfolio/static/css/main.9e72c987.css.map",
-    "main.a8738722.js.map": "/iturres-reactive-portfolio/static/js/main.a8738722.js.map"
+    "main.f0d38b4e.css.map": "/iturres-reactive-portfolio/static/css/main.f0d38b4e.css.map",
+    "main.0f377800.js.map": "/iturres-reactive-portfolio/static/js/main.0f377800.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e72c987.css",
-    "static/js/main.a8738722.js"
+    "static/css/main.f0d38b4e.css",
+    "static/js/main.0f377800.js"
   ]
 }
