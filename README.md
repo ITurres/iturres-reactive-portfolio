@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-    <img src="/public/reactive-portfolio-favicon.png" alt="logo" width="320"  height="auto" />
+    <img src="/public/reactive-portfolio-favicon.png" alt="arthur logo" width="300"  height="auto" />
     <h1><b>⚛️ ITurres | Reactive Portfolio ⚛️</b></h1>
 </div>
 
@@ -20,6 +20,7 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
 - [👥 Authors](#authors)
+- [🔭 Future features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 
@@ -151,6 +152,18 @@ To run the project, execute the following command:
 - LinkedIn: [Arthur Emanuel G. Iturres](https://www.linkedin.com/in/arturoemanuelguerraiturres/)
 - Angellist / Wellfound: [Arturo (Arthur) Emanuel Guerra Iturres](https://wellfound.com/u/arturo-arthur-emanuel-guerra-iturres)
 - Youtube: [Arturo Emanuel Guerra Iturres - Youtube Channel](https://www.youtube.com/channel/UC6GFUFHOtBS9mOuI8EJ6q4g)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+<!-- * FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **LineCount** component height based on document instead of on window (test).
+- [ ] Scrollable count for **LineCount** component.
+- [ ] **FloatingAstronaut** on **ExpertisePage**.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
