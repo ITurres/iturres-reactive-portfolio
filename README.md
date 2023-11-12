@@ -164,6 +164,8 @@ To run the project, execute the following command:
 - [ ] **LineCount** component height based on document instead of on window (test).
 - [ ] Scrollable count for **LineCount** component.
 - [ ] **FloatingAstronaut** on **ExpertisePage**.
+- [ ] Add **Suspense** and **ErrorBoundaries**.
+- [ ] Swap configs to Environmental Variables.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
