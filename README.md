@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-    <img src="/public/reactive-portfolio-favicon.png" alt="arthur logo" width="300"  height="auto" />
+    <img src="/public/reactive-portfolio-favicon.png" alt="arthur logo" width="250"  height="auto" />
     <h1><b>⚛️ ITurres | Reactive Portfolio ⚛️</b></h1>
 </div>
 
@@ -161,11 +161,12 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **LineCount** component height based on document instead of on window (test).
+- [ ] **LineCount** component height based on the document instead of on window (test).
 - [ ] Scrollable count for **LineCount** component.
 - [ ] **FloatingAstronaut** on **ExpertisePage**.
 - [ ] Add **Suspense** and **ErrorBoundaries**.
 - [ ] Swap configs to Environmental Variables.
+- [ ] Small Waving Alien in _Thank You btn message_ at the contact form.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
