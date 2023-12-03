@@ -167,6 +167,7 @@ To run the project, execute the following command:
 - [ ] Add **Suspense** and **ErrorBoundaries**.
 - [ ] Swap configs to Environmental Variables.
 - [ ] Small Waving Alien in _Thank You btn message_ at the contact form.
+- [ ] Horizontal ide Navbar.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
