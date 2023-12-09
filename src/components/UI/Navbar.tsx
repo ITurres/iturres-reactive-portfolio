@@ -25,6 +25,7 @@ const Navbar: React.FC = () => {
         type="button"
         onClick={toggleMenu}
         title="Menu"
+        aria-label="Menu"
       >
         <CgMenuMotion size={iconSize} className="text-hue-rotate" />
       </button>
@@ -43,6 +44,7 @@ const Navbar: React.FC = () => {
             href="https://github.com/ITurres"
             target="_blank"
             rel="noreferrer noopener"
+            aria-label="My Github"
           >
             <AiFillGithub
               size={iconSize}
@@ -56,6 +58,7 @@ const Navbar: React.FC = () => {
             href="https://www.linkedin.com/in/arturoemanuelguerraiturres/"
             target="_blank"
             rel="noreferrer noopener"
+            aria-label="My Linkedin"
           >
             <BiLogoLinkedin
               size={iconSize}
