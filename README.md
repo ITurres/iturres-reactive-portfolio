@@ -138,6 +138,22 @@ To run the project, execute the following command:
   npm start
 ```
 
+### Linters
+
+To run the linters included in this project, execute the following command:
+
+- ESLint:
+
+```bash
+  npx eslint "**/*.{js,jsx}"
+```
+
+- Stylelint:
+
+```bash
+  npx stylelint "**/*.{css,scss}"
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
