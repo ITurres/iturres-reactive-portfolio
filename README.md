@@ -145,7 +145,7 @@ To run the linters included in this project, execute the following command:
 - ESLint:
 
 ```bash
-  npx eslint "**/*.{js,jsx}"
+  npx eslint "**/*.{ts,tsx}"
 ```
 
 - Stylelint:
