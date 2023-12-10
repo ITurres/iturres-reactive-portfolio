@@ -4,8 +4,6 @@ import React, {
 
 import '../../styles/UI/ContactForm.scss';
 
-import config from '../../config.ts';
-
 const ContactForm: React.FC = () => {
   const [formContent, setFormContent] = useState(
     JSON.parse(sessionStorage.getItem('formContent')!) || null,
@@ -15,7 +13,7 @@ const ContactForm: React.FC = () => {
 
   const [formSubmittedStatus, setFormSubmittedStatus] = useState(false);
 
-  const actionURL = config.formActionURL;
+  const actionURL = process.env.REACT_APP_FORM_ACTION_URL;
 
   const $form = useRef<HTMLFormElement | null>(null);
   const $nameInputRef = useRef<HTMLInputElement | null>(null);
@@ -165,7 +163,7 @@ const ContactForm: React.FC = () => {
 
   const submitForm = async () => {
     try {
-      await fetch(actionURL, {
+      await fetch(actionURL!, {
         method: 'POST',
         body: JSON.stringify({
           name: $nameInputRef.current?.value,
