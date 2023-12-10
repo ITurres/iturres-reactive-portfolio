@@ -1,6 +1,5 @@
-import config from '../../config.ts';
-
-const { baseURL, appId } = config.involvementAPI;
+const baseURL = process.env.REACT_APP_INVOLVEMENT_API_BASE_URL;
+const appId = process.env.REACT_APP_INVOLVEMENT_API_APP_ID;
 
 const postLike = async (itemId: string) => {
   try {
