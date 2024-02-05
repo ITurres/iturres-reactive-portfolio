@@ -6,7 +6,9 @@ $light-gray: colors.$light-gray;
 .line-count {
   display: none;
 
-  @media (min-width: 630px) {
+  @media (min-width: 768px) {
+    margin-top: 2.6rem;
+
     & {
       display: flex;
       flex-direction: column;

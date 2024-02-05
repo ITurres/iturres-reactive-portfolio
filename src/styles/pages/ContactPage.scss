@@ -32,9 +32,15 @@ body:has(.drone) {
     -2
   );
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 90%;
+    min-height: 95vh;
 
-    @include mixins.component-code-snippet('const Contact = () => {');
+    @include mixins.component-code-snippet(
+      'const Contact = () => {',
+      colors.$color1,
+      colors.$color1,
+      4
+    );
   }
 }

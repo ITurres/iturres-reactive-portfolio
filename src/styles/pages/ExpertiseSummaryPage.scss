@@ -96,8 +96,23 @@ $font-family-regular: fonts.$font-family-regular;
     }
   }
 
+  @media screen and (min-width: 768px) {
+    @include mixins.component-code-snippet(
+      'const Expertise = () => {',
+      $dark,
+      $color1,
+      4,
+      // * top
+      1,
+      // * bottom
+      0 // * bottom-desktop
+    );
+
+    padding-top: 3rem;
+  }
+
   @media (min-width: 1366px) {
-    flex-direction: row;
+    // flex-direction: row;
     padding-left: 6rem;
 
     &__card {
