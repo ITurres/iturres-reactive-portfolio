@@ -1,0 +1,40 @@
+{
+  "autorun": true,
+  "focus": true,
+  "preLaunchTask": "",
+  "terminals": [
+    {
+      "name": "Commit",
+      "type": "bash",
+      "color": "terminal.ansiBlue",
+      "icon": "git-commit",
+      "command": "git branch -a"
+    },
+    {
+      "name": "React CLI",
+      "type": "bash",
+      "color": "terminal.ansiWhite",
+      "icon": "terminal"
+    },
+    {
+      "name": "React Dev Server",
+      "type": "bash",
+      "color": "terminal.ansiCyan",
+      "icon": "browser",
+      "command": "npm start"
+    },
+    {
+      "name": "Jest",
+      "type": "bash",
+      "color": "terminal.ansiYellow",
+      "icon": "microscope"
+    },
+    {
+      "name": "Linters",
+      "type": "bash",
+      "color": "terminal.ansiGreen",
+      "icon": "checklist",
+      "command": "npx eslint '**/*.{ts,tsx}' && npx stylelint '**/*.{css,scss}'"
+    }
+  ]
+}
