@@ -1,16 +1,31 @@
-import React, { CSSProperties, useRef } from 'react';
+import React, {
+  useEffect,
+  useState,
+  CSSProperties,
+  useRef,
+} from 'react';
+
 import { Link } from 'react-router-dom';
 
 import { SiAboutdotme } from 'react-icons/si';
 import { CgMenuMotion } from 'react-icons/cg';
 import { AiFillGithub, AiOutlineMail } from 'react-icons/ai';
 import { BiLogoLinkedin, BiExit } from 'react-icons/bi';
-import { FaProjectDiagram } from 'react-icons/fa';
+import { FaProjectDiagram, FaAngellist } from 'react-icons/fa';
 import { LuSquareStack } from 'react-icons/lu';
 
 import '../../styles/UI/Navbar.scss';
 
 const Navbar: React.FC = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const minWith = 768;
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setWindowWidth(window.innerWidth);
+    });
+  }, [windowWidth]);
+
   const $menu = useRef<HTMLElement>(null);
   const iconSize = 30;
 
@@ -30,15 +45,6 @@ const Navbar: React.FC = () => {
         <CgMenuMotion size={iconSize} className="text-hue-rotate" />
       </button>
       <ul>
-        <li style={{ '--elem': 0 } as CSSProperties}>
-          <Link to="/iturres-reactive-portfolio/homepage">
-            <SiAboutdotme
-              size={iconSize}
-              className="text-hue-rotate"
-              title="About me"
-            />
-          </Link>
-        </li>
         <li style={{ '--elem': 1 } as CSSProperties}>
           <a
             href="https://github.com/ITurres"
@@ -68,37 +74,66 @@ const Navbar: React.FC = () => {
           </a>
         </li>
         <li style={{ '--elem': 3 } as CSSProperties}>
-          <Link to="/iturres-reactive-portfolio/homepage/projects">
-            <FaProjectDiagram
+          <a
+            href="https://wellfound.com/u/arturo-arthur-emanuel-guerra-iturres"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="My Wellfound"
+          >
+            <FaAngellist
               size={iconSize}
               className="text-hue-rotate"
-              title="My Projects"
+              title="My Wellfound"
             />
-          </Link>
+          </a>
         </li>
         <li style={{ '--elem': 4 } as CSSProperties}>
-          <Link to="/iturres-reactive-portfolio/homepage/contact">
-            <AiOutlineMail
-              size={iconSize}
-              className="text-hue-rotate"
-              title="Contact me!"
-            />
-          </Link>
-        </li>
-        <li style={{ '--elem': 5 } as CSSProperties}>
           <Link to="/iturres-reactive-portfolio/">
             <BiExit size={iconSize} className="text-hue-rotate" title="Exit" />
           </Link>
         </li>
-        <li style={{ '--elem': 6 } as CSSProperties}>
-          <Link to="/iturres-reactive-portfolio/homepage/expertise">
-            <LuSquareStack
-              size={iconSize}
-              className="text-hue-rotate"
-              title="Expertise"
-            />
-          </Link>
-        </li>
+
+        {/* ! SHOW ONLY ON MOBILE */}
+        {windowWidth < minWith && (
+          <>
+            <li style={{ '--elem': 5 } as CSSProperties}>
+              <Link to="/iturres-reactive-portfolio/homepage">
+                <SiAboutdotme
+                  size={iconSize}
+                  className="text-hue-rotate"
+                  title="About me"
+                />
+              </Link>
+            </li>
+            <li style={{ '--elem': 6 } as CSSProperties}>
+              <Link to="/iturres-reactive-portfolio/homepage/projects">
+                <FaProjectDiagram
+                  size={iconSize}
+                  className="text-hue-rotate"
+                  title="My Projects"
+                />
+              </Link>
+            </li>
+            <li style={{ '--elem': 7 } as CSSProperties}>
+              <Link to="/iturres-reactive-portfolio/homepage/contact">
+                <AiOutlineMail
+                  size={iconSize}
+                  className="text-hue-rotate"
+                  title="Contact me!"
+                />
+              </Link>
+            </li>
+            <li style={{ '--elem': 8 } as CSSProperties}>
+              <Link to="/iturres-reactive-portfolio/homepage/expertise">
+                <LuSquareStack
+                  size={iconSize}
+                  className="text-hue-rotate"
+                  title="Expertise"
+                />
+              </Link>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
   );
