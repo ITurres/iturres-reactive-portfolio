@@ -3,6 +3,7 @@ import React, {
   useEffect,
   useMemo,
   useState,
+  useCallback,
 } from 'react';
 
 import '../../styles/UI/ContactForm.scss';
@@ -73,7 +74,7 @@ const ContactForm: React.FC = () => {
     }
   };
 
-  const validateInput = (input: any, regex: RegExp) => {
+  const validateInput = useCallback((input: any, regex: RegExp) => {
     const inputKey = input.obj.current?.name as keyof typeof inputs;
     const isValid = regex.test(input.obj.current?.value || '');
 
@@ -84,7 +85,7 @@ const ContactForm: React.FC = () => {
     setSubmitButtonStyle(
       Object.values(inputs).every((inputObj) => inputObj.validated),
     );
-  };
+  }, [inputs]);
 
   useEffect(() => {
     if (formContent) {
@@ -92,7 +93,7 @@ const ContactForm: React.FC = () => {
     }
   }, [formContent]);
 
-  const updateFormContent = (input: any) => () => {
+  const updateFormContent = useCallback((input: any) => () => {
     const inputKey = input.obj.current?.name as keyof typeof inputs;
 
     setFormContent((previousFormContent: any) => {
@@ -101,7 +102,7 @@ const ContactForm: React.FC = () => {
 
       return currentFormContent;
     });
-  };
+  }, []);
 
   useEffect(() => {
     Object.values(inputs).forEach((input) => {
@@ -111,7 +112,7 @@ const ContactForm: React.FC = () => {
         input.obj.current?.removeEventListener('blur', updateFormContent);
       };
     });
-  }, [inputs]);
+  }, [inputs, updateFormContent]);
 
   // * this useEffect is to update the form inputs values and styles
   // * when the user comes back to the page.
@@ -138,7 +139,7 @@ const ContactForm: React.FC = () => {
         }
       });
     }
-  }, [formContent, inputs, validInputsPattern]);
+  }, [formContent, inputs, validInputsPattern, validateInput]);
 
   const submitButtonErrorContent = (error: Error | string) => {
     if ($submitButton.current) {
@@ -149,7 +150,7 @@ const ContactForm: React.FC = () => {
     }
   };
 
-  const hideInputs = () => {
+  const hideInputs = useCallback(() => {
     if (formSubmittedStatus) {
       Object.values(inputs).forEach((input) => {
         const inputElement = input;
@@ -159,11 +160,11 @@ const ContactForm: React.FC = () => {
         }
       });
     }
-  };
+  }, [formSubmittedStatus, inputs]);
 
   useEffect(() => {
     if (formSubmittedStatus) hideInputs();
-  }, [formSubmittedStatus]);
+  }, [formSubmittedStatus, hideInputs]);
 
   const submitForm = async () => {
     try {
@@ -227,7 +228,7 @@ const ContactForm: React.FC = () => {
         input.obj.current?.removeEventListener('keyup', () => validateInput);
       };
     });
-  }, [inputs]);
+  }, [inputs, validInputsPattern, validateInput]);
 
   return (
     <form
