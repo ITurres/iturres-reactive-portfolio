@@ -7,21 +7,18 @@ $light-gray: colors.$light-gray;
   display: none;
 
   @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgba(0, 0, 0, 0.289);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 40px;
+    padding: 1.2rem 0.3rem 0 0.3rem;
+    text-align: right;
     margin-top: 2.6rem;
-
-    & {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      background: rgba(0, 0, 0, 0.289);
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 40px;
-      padding: 1.2rem 0.3rem 0 0.3rem;
-      text-align: right;
-    }
 
     &__line {
       font-size: 1rem;
