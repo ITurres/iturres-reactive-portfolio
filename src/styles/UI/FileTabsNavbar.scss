@@ -16,14 +16,16 @@ $light-gray: colors.$light-gray;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100;
   width: 100%;
-  background: linear-gradient(
-    90deg,
-    rgb(23, 23, 23),
-    rgb(23, 23, 23),
-    rgba(23, 23, 23, 0.605),
-    rgba(23, 23, 23, 0.221)
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgb(23, 23, 23),
+      rgb(23, 23, 23),
+      rgba(23, 23, 23, 0.605),
+      rgba(23, 23, 23, 0.221)
+    );
   font-family: sans-serif;
   font-size: 1rem;
   font-weight: 500;
