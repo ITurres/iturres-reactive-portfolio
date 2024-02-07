@@ -1,5 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 
+import { Link } from 'react-router-dom';
+
+import { AiOutlineMail } from 'react-icons/ai';
+
 import profileImage from '../../assets/images/profile/profile.png';
 import homepageDotsImage from '../../assets/images/bg/homepage-dots-img.png';
 import '../../styles/pages/AboutPage.scss';
@@ -28,14 +32,27 @@ const AboutPage: React.FC = () => {
           <span className="emoji">&#128075;</span>
         </h1>
         <p className="aboutPage__about-p">
-          I excel in remote collaboration, driven by a robust skill set
-          developed through daily coding with global teams. I&apos;m adept at
-          meeting tight deadlines and experienced in diverse tech stacks like
-          React, Redux, TypeScript, JavaScript, SASS, CSS, HTML and more. My
-          adaptability, honed by international living experiences, enables me to
-          collaborate with diverse teams across the world seamlessly.
+          I excel in collaborative environments, leveraging a robust skill set
+          honed through daily interactions with global teams. My experience
+          spans diverse tech stacks, including Rails, React, Redux, TypeScript,
+          JavaScript, SASS, CSS, HTML, and more. Committed to meeting tight
+          deadlines, I am an advocate for teamwork, recognizing its pivotal role
+          in driving organizational success. My adaptability, cultivated through
+          international living experiences, enables me to seamlessly collaborate
+          with diverse teams worldwide.
         </p>
+
         <AnimatedButton />
+
+        <Link
+          to="/iturres-reactive-portfolio/homepage/contact"
+          className="aboutPage__cta"
+          title="This link will take you to the contact page."
+        >
+          <AiOutlineMail size={20} className="mail-icon text-hue-rotate" />
+          &nbsp;Let&apos;s collaborate and drive success together. Reach out to
+          discuss how we can achieve your goals. ( link )
+        </Link>
       </div>
       <div className="aboutPage__images">
         <img
