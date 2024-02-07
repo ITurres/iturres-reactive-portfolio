@@ -31,6 +31,11 @@ const ContactPage: React.FC = () => {
         {windowWidth >= laptopWidth ? <Drone /> : null}
         <main className="contact-page container">
           <ContactForm />
+
+          <div className="contact-page__details text-hue-rotate">
+            <span>arthuriturres.co@gmail.com</span>
+            <span>emanueliturres.co@gmail.com</span>
+          </div>
         </main>
       </div>
     </div>
