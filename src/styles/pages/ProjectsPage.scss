@@ -22,6 +22,17 @@ $font-family-regular: fonts.$font-family-regular;
     colors.$color1
   );
 
+  @media screen and (min-width: 768px) {
+    padding-top: 3rem;
+
+    @include mixins.component-code-snippet(
+      'const Projects = () => {',
+      colors.$color1,
+      colors.$color1,
+      4
+    );
+  }
+
   min-height: 100vh;
 
   // ! START of Splide Styles overrides.

@@ -66,10 +66,17 @@ $color1: colors.$color1;
   }
 
   @media (min-width: 768px) {
+    @include mixins.component-code-snippet(
+      'const About = () => {',
+      $color1,
+      $color1,
+      4
+    );
+
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 
     &__about {
       width: 60%;
