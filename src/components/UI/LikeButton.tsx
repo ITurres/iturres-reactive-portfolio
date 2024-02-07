@@ -1,4 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  useCallback,
+} from 'react';
 
 import { SlLike } from 'react-icons/sl';
 
@@ -18,17 +23,17 @@ const LikeButton: React.FC<LikeButtonProps> = ({ itemId }) => {
 
   const likeBtn = useRef<HTMLButtonElement>(null);
 
-  const styleButton = () => {
+  const styleButton = useCallback(() => {
     if (wasLiked) {
       likeBtn.current?.classList.toggle('liked');
     }
-  };
+  }, [wasLiked]);
 
   useEffect(() => {
     if (wasLiked) {
       styleButton();
     }
-  }, [wasLiked]);
+  }, [wasLiked, styleButton]);
 
   interface Like {
     // * disable camelcase since 'item_id' is the name of the property in the API response.
@@ -37,7 +42,7 @@ const LikeButton: React.FC<LikeButtonProps> = ({ itemId }) => {
     likes: number;
   }
 
-  const updateLikeCount = async () => {
+  const updateLikeCount = useCallback(async () => {
     const likes: Like[] = (await involvement.getLikes()) as Like[];
 
     const likedProject = likes.find((like) => like.item_id === itemId);
@@ -45,11 +50,11 @@ const LikeButton: React.FC<LikeButtonProps> = ({ itemId }) => {
     if (likedProject) {
       setLikeCount(likedProject.likes);
     }
-  };
+  }, [itemId]);
 
   useEffect(() => {
     updateLikeCount();
-  }, [itemId]);
+  }, [itemId, updateLikeCount]);
 
   const handleLikeSubmit = async () => {
     setWasLiked((liked) => !liked);
