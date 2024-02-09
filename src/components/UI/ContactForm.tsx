@@ -1,8 +1,14 @@
 import React, {
-  useRef, useEffect, useMemo, useState,
+  useRef,
+  useEffect,
+  useMemo,
+  useState,
+  useCallback,
 } from 'react';
 
 import '../../styles/UI/ContactForm.scss';
+
+const successButtonIcon = 'https://camo.githubusercontent.com/b55970b1d4c6e5d8d09a07556bce08ff3cfec080b680ad6b5be3ed46546e6f77/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6b52654b6366727331596f546d74324151742f67697068792e676966';
 
 const ContactForm: React.FC = () => {
   const [formContent, setFormContent] = useState(
@@ -36,9 +42,8 @@ const ContactForm: React.FC = () => {
     () => ({
       name: /[a-z]{2,}/,
       company: /[a-z]{3,}/,
-      email:
-        /^[\w.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-      message: /[\w.!,.@#%&'"*+/=-]{20,}/,
+      email: /^[\w.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+      message: /[\w\s.!,.@#%&'"*+/=-]{20,}/,
     }),
     [],
   );
@@ -69,7 +74,7 @@ const ContactForm: React.FC = () => {
     }
   };
 
-  const validateInput = (input: any, regex: RegExp) => {
+  const validateInput = useCallback((input: any, regex: RegExp) => {
     const inputKey = input.obj.current?.name as keyof typeof inputs;
     const isValid = regex.test(input.obj.current?.value || '');
 
@@ -80,7 +85,7 @@ const ContactForm: React.FC = () => {
     setSubmitButtonStyle(
       Object.values(inputs).every((inputObj) => inputObj.validated),
     );
-  };
+  }, [inputs]);
 
   useEffect(() => {
     if (formContent) {
@@ -88,7 +93,7 @@ const ContactForm: React.FC = () => {
     }
   }, [formContent]);
 
-  const updateFormContent = (input: any) => () => {
+  const updateFormContent = useCallback((input: any) => () => {
     const inputKey = input.obj.current?.name as keyof typeof inputs;
 
     setFormContent((previousFormContent: any) => {
@@ -97,7 +102,7 @@ const ContactForm: React.FC = () => {
 
       return currentFormContent;
     });
-  };
+  }, []);
 
   useEffect(() => {
     Object.values(inputs).forEach((input) => {
@@ -107,7 +112,7 @@ const ContactForm: React.FC = () => {
         input.obj.current?.removeEventListener('blur', updateFormContent);
       };
     });
-  }, [inputs]);
+  }, [inputs, updateFormContent]);
 
   // * this useEffect is to update the form inputs values and styles
   // * when the user comes back to the page.
@@ -134,7 +139,7 @@ const ContactForm: React.FC = () => {
         }
       });
     }
-  }, [formContent, inputs, validInputsPattern]);
+  }, [formContent, inputs, validInputsPattern, validateInput]);
 
   const submitButtonErrorContent = (error: Error | string) => {
     if ($submitButton.current) {
@@ -145,7 +150,7 @@ const ContactForm: React.FC = () => {
     }
   };
 
-  const hideInputs = () => {
+  const hideInputs = useCallback(() => {
     if (formSubmittedStatus) {
       Object.values(inputs).forEach((input) => {
         const inputElement = input;
@@ -155,11 +160,11 @@ const ContactForm: React.FC = () => {
         }
       });
     }
-  };
+  }, [formSubmittedStatus, inputs]);
 
   useEffect(() => {
     if (formSubmittedStatus) hideInputs();
-  }, [formSubmittedStatus]);
+  }, [formSubmittedStatus, hideInputs]);
 
   const submitForm = async () => {
     try {
@@ -223,7 +228,7 @@ const ContactForm: React.FC = () => {
         input.obj.current?.removeEventListener('keyup', () => validateInput);
       };
     });
-  }, [inputs]);
+  }, [inputs, validInputsPattern, validateInput]);
 
   return (
     <form
@@ -235,7 +240,7 @@ const ContactForm: React.FC = () => {
         type="text"
         ref={$nameInputRef}
         name="name"
-        placeholder="tell me your name"
+        placeholder="your name, at least 2 characters long"
         minLength={2}
         required
       />
@@ -244,7 +249,7 @@ const ContactForm: React.FC = () => {
         type="text"
         ref={$companyInputRef}
         name="company"
-        placeholder="your company name here!"
+        placeholder="your company name, at least 3 characters long"
         minLength={3}
         required
       />
@@ -253,21 +258,34 @@ const ContactForm: React.FC = () => {
         type="email"
         ref={$emailInputRef}
         name="email"
-        placeholder="an email so I can contact you back!"
+        placeholder="an email, e.g example@gmail.com"
         required
       />
 
       <textarea
         ref={$messageInputRef}
         name="message"
-        placeholder="your message here!"
+        placeholder="your message, at least 20 characters long"
         rows={5}
         cols={20}
         required
       />
 
-      <button type="submit" ref={$submitButton} className="my-btn">
+      <button
+        type="submit"
+        disabled={formSubmittedStatus}
+        ref={$submitButton}
+        className="my-btn"
+      >
         {formSubmittedStatus ? 'Thank you!' : 'Send'}
+        {formSubmittedStatus && (
+          <img
+            src={successButtonIcon}
+            alt="alien waving hand"
+            aria-hidden="true"
+            className="send-email-icon"
+          />
+        )}
       </button>
     </form>
   );

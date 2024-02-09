@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { IoMdArrowRoundDown } from 'react-icons/io';
+
 import '../../styles/pages/ContactPage.scss';
 
 import Drone from '../animations/Drone.tsx';
@@ -31,6 +33,11 @@ const ContactPage: React.FC = () => {
         {windowWidth >= laptopWidth ? <Drone /> : null}
         <main className="contact-page container">
           <ContactForm />
+
+          <div className="contact-page__details text-hue-rotate">
+            <IoMdArrowRoundDown className="details-icon" />
+            <span>arthuriturres.co@gmail.com</span>
+          </div>
         </main>
       </div>
     </div>

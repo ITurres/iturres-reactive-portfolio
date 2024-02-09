@@ -181,9 +181,9 @@ To run the linters included in this project, execute the following command:
 - [ ] Scrollable count for **LineCount** component.
 - [ ] **FloatingAstronaut** on **ExpertisePage**.
 - [ ] Add **Suspense** and **ErrorBoundaries**.
-- [ ] Swap configs to Environmental Variables.
-- [ ] Small Waving Alien in _Thank You btn message_ at the contact form.
-- [ ] Horizontal ide Navbar.
+- [x] Swap configs to Environmental Variables.
+- [x] Small Waving Alien in _Thank You btn message_ at the contact form.
+- [x] Horizontal ide Navbar.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

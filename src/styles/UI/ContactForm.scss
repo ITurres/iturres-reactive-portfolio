@@ -83,6 +83,7 @@ $valid: rgb(9, 247, 9);
   }
 
   button[type='submit'] {
+    position: relative;
     background-color: $transparent-black;
     border-bottom: $border-size solid $color1;
     color: $color1;
@@ -111,6 +112,18 @@ $valid: rgb(9, 247, 9);
       &:hover {
         text-shadow: 0 0 5rem $valid;
       }
+    }
+
+    &:has(.send-email-icon) {
+      padding: 1.6rem;
+      cursor: not-allowed;
+    }
+
+    .send-email-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 35px;
     }
   }
 }

@@ -1,5 +1,41 @@
 {
-  "languages": ["TypeScript", "JavaScript", "Ruby", "SASS", "CSS", "HTML"],
-  "frameworks": ["React.js", "Ruby on Rails", "RSpec"],
-  "skills": ["Version Control", "CLI", "Web Development"]
+  "languages": ["TypeScript", "JavaScript", "Ruby", "Python", "c"],
+  "frameworks & libraries": [
+    "React.js",
+    "Redux",
+    "Jest",
+    "Ruby on Rails",
+    "RSpec",
+    "Bootstrap",
+    "D3.js",
+    "Flask"
+  ],
+  "web development": [
+    "HTML",
+    "CSS3",
+    "SASS",
+    "Responsive design",
+    "Cross-browser compatibility",
+    "Web accessibility",
+    "SEO"
+  ],
+  "database management": ["PostgreSQL", "SQLite"],
+  "OS and tools": [
+    "Windows",
+    "Linux",
+    "Git",
+    "CLI",
+    "VSCode",
+    "Postman",
+    "Render"
+  ],
+  "skills": [
+    "TDD",
+    "Agile",
+    "Pair Programming",
+    "Teamwork",
+    "Project planning",
+    "Problem solving",
+    "Communication"
+  ]
 }
