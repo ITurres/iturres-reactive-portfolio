@@ -383,10 +383,9 @@
           "name2": "E-commerce"
         },
         "description": [
-          "The Time Meister e-commerce is a website that resembles",
-          "the rolex.com site, was a project to continue learning",
-          "and practicing the technologies listed above as well",
-          "as to follow an established design."
+          "Drawing inspiration from the renowned Rolex website, TTM was developed",
+          "with meticulous attention to detail in terms of design, functionality,",
+          "and features, resulting in a partial clone of the original October 2022 platform."
         ],
         "stack": ["JavaScript", "Node.js", "CSS3", "HTML"],
         "liveVersionHref": "https://iturres.github.io/ttm-e-commerce/",
