@@ -129,7 +129,7 @@
           "Redux",
           "JavaScript",
           "Jest",
-          "SASS",
+          "SCSS",
           "React-Bootstrap",
           "API consumer"
         ],
@@ -160,7 +160,7 @@
           "Redux",
           "JavaScript",
           "Jest",
-          "CSS",
+          "CSS3",
           "Bootstrap",
           "HTML",
           "API consumer"
@@ -192,7 +192,7 @@
           "React.js",
           "Redux",
           "JavaScript",
-          "SASS",
+          "SCSS",
           "Bootstrap",
           "HTML",
           "API consumer"
@@ -224,7 +224,7 @@
         "stack": [
           "React.js",
           "JavaScript",
-          "SASS",
+          "SCSS",
           "Bootstrap",
           "HTML",
           "API consumer"
@@ -250,7 +250,7 @@
           "shows related info taken from TVmaze API. You can also like them",
           "and add comments thanks to the Involvement API."
         ],
-        "stack": ["JavaScript", "HTML", "CSS", "Bootstrap", "API consumer"],
+        "stack": ["JavaScript", "CSS", "Bootstrap", "HTML", "API consumer"],
         "liveVersionHref": "https://iturres.github.io/TVmaze-shows-website/dist/",
         "sourceCodeHref": "https://github.com/ITurres/TVmaze-movies-website"
       }
@@ -273,7 +273,7 @@
           "your score. All data is preserved thanks to the external",
           "Leaderboard API."
         ],
-        "stack": ["JavaScript", "HTML", "SASS", "Bootstrap", "API consumer"],
+        "stack": ["JavaScript", "SCSS", "Bootstrap", "HTML", "API consumer"],
         "liveVersionHref": "https://iturres.github.io/Leaderboard/dist/",
         "sourceCodeHref": "https://github.com/ITurres/Leaderboard"
       }
@@ -295,7 +295,7 @@
           "It simply lists the things that you need to do and allows you to mark",
           "them as complete. Tested with Jest."
         ],
-        "stack": ["JavaScript", "Jest", "HTML", "SASS", "Bootstrap"],
+        "stack": ["JavaScript", "Jest", "SCSS", "HTML", "Bootstrap"],
         "liveVersionHref": "https://iturres.github.io/Task-Manager/dist/",
         "sourceCodeHref": "https://github.com/ITurres/Task-Manager"
       }
@@ -317,7 +317,7 @@
           "The learning objectives were to understand different ways to create objects, intro",
           "to CRUD and more."
         ],
-        "stack": ["JavaScript", "HTML", "CSS", "Bootstrap"],
+        "stack": ["JavaScript", "HTML", "CSS3", "Bootstrap"],
         "liveVersionHref": "https://iturres.github.io/Awesome-Books/",
         "sourceCodeHref": "https://github.com/ITurres/Awesome-Books"
       }
@@ -340,7 +340,7 @@
           "Understanding Medium-fidelity wireframes,",
           "follow written requirements (e.g. user stories), and much more."
         ],
-        "stack": ["JavaScript", "HTML", "CSS", "Bootstrap"],
+        "stack": ["JavaScript", "HTML", "CSS3", "Bootstrap"],
         "liveVersionHref": "https://iturres.github.io/Ferrari-Racing-Website/",
         "sourceCodeHref": "https://github.com/ITurres/Ferrari-Racing-Website"
       }
@@ -365,7 +365,7 @@
           "and where you can create an account, sign in and start creating,",
           "updating, and deleting your notes, plus search for specific ones given their content."
         ],
-        "stack": ["Python", "Flask", "JavaScript", "SQLite", "HTML", "CSS"],
+        "stack": ["Python", "Flask", "JavaScript", "SQLite", "CSS3", "HTML"],
         "liveVersionHref": "https://www.youtube.com/watch?v=UJucGYwoDCA",
         "sourceCodeHref": "https://github.com/ITurres/Notes-Web-App"
       }
@@ -388,7 +388,7 @@
           "and practicing the technologies listed above as well",
           "as to follow an established design."
         ],
-        "stack": ["JavaScript", "Node.js", "HTML", "CSS"],
+        "stack": ["JavaScript", "Node.js", "CSS3", "HTML"],
         "liveVersionHref": "https://iturres.github.io/ttm-e-commerce/",
         "sourceCodeHref": "https://github.com/ITurres/ttm-e-commerce"
       }
@@ -410,7 +410,7 @@
           "understand and learn more about JavaScript, as well as",
           "CSS animations and transitions and much more."
         ],
-        "stack": ["JavaScript", "HTML", "CSS"],
+        "stack": ["JavaScript", "CSS3", "HTML"],
         "liveVersionHref": "https://iturres.github.io/Emanuel-Portfolio/",
         "sourceCodeHref": "https://github.com/ITurres/Emanuel-Portfolio"
       }
@@ -434,7 +434,7 @@
           "there goes your extremities, if you get to form",
           "the word before they hang you, you get King Arthur's Sword."
         ],
-        "stack": ["JavaScript", "HTML", "CSS"],
+        "stack": ["JavaScript", "CSS3", "HTML"],
         "liveVersionHref": "https://iturres.github.io/The-Dungeons-Game/",
         "sourceCodeHref": "https://github.com/ITurres/The-Dungeons-Game"
       }
@@ -458,7 +458,7 @@
           "with JavaScript. In turn, once the logic of the program is finished",
           "structure the page with HTML and give it life with CSS."
         ],
-        "stack": ["JavaScript", "HTML", "CSS"],
+        "stack": ["JavaScript", "CSS3", "HTML"],
         "liveVersionHref": "https://iturres.github.io/Project_Encryptor/",
         "sourceCodeHref": "https://github.com/ITurres/Project_Encryptor"
       }
@@ -480,7 +480,7 @@
           "layouts as well as CSS styles, in order to fully",
           "copy 2023's youtube video player webpage."
         ],
-        "stack": ["JavaScript", "HTML", "CSS"],
+        "stack": ["JavaScript", "CSS3", "HTML"],
         "liveVersionHref": "https://iturres.github.io/project_media_TOP/",
         "sourceCodeHref": "https://github.com/ITurres/project_media_TOP"
       }
