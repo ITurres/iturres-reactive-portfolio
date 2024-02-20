@@ -1,8 +1,8 @@
 {
-  "short_name": "reactive-portfolio",
-  "name": "reactive-portfolio",
+  "short_name": "Arthur ITurres Portfolio",
+  "name": "Arthur ITurres Portfolio",
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#090909",
   "background_color": "#ffffff"
 }
