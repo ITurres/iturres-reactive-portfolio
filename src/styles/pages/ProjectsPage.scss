@@ -6,6 +6,7 @@
 
 $color1: colors.$color1;
 $color2-hover: colors.$color2-hover;
+$dark: colors.$dark;
 
 $transparent-grey: rgba(255, 255, 255, 0.073);
 
@@ -39,6 +40,13 @@ $font-family-regular: fonts.$font-family-regular;
 
   .splide__list {
     padding: 5rem 0 !important;
+  }
+
+  .splide__arrows {
+    position: absolute;
+    bottom: 1rem;
+    left: 43%;
+    right: 43%;
   }
 
   .splide__arrow {
@@ -75,6 +83,24 @@ $font-family-regular: fonts.$font-family-regular;
   // ! END of Splide Styles overrides.
 
   .splide__slide__container {
+    .splide__slide__img--wrapper {
+      position: relative;
+    }
+
+    .splide__slide__project-type {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 0.6rem;
+      font-family: $font-family-regular;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $color1;
+      background-color: rgba($dark, 70%);
+      padding: 0.2rem 0.3rem 0.1rem 0.5rem;
+      border-radius: 4px 0 2px 0;
+    }
+
     .splide__slide__overlay {
       padding: 0.5rem 0.6rem;
       margin: 0.7rem 0;
