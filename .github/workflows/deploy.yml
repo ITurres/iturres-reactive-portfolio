@@ -9,7 +9,7 @@ jobs:
   deploy:
     name: portfolioDeploy
     runs-on: ubuntu-latest
-    environment: github-pages
+    environment: development
     env:
       REACT_APP_FORM_ACTION_URL: ${{ secrets.REACT_APP_FORM_ACTION_URL }}
       REACT_APP_INVOLVEMENT_API_BASE_URL: ${{ secrets.REACT_APP_INVOLVEMENT_API_BASE_URL }}
