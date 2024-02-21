@@ -1,7 +1,112 @@
 {
+  "group4": [
+    {
+      "id": "2faa6ac8-84e3-4821-b603-619c2b2b4c0e",
+      "projectType": "team",
+      "data": {
+        "img": {
+          "src": "tesla-booking-app-preview.jpg",
+          "alt": "tesla booking app preview"
+        },
+        "projectName": {
+          "name1": "Tesla's Booking App",
+          "name2": ""
+        },
+        "description": [
+          "Book your ideal Tesla model effortlessly with our new Tesla vehicle",
+          "booking app! Enjoy daily rates on our five available models, available",
+          "in cities worldwide. Experience the best service in the industry.",
+          "Facilitates user registration, log-in, and ride booking with five Tesla",
+          "vehicles. Users can manage extra vehicle additions and removals."
+        ],
+        "stack": [
+          "React.js",
+          "Ruby on Rails",
+          "PostgreSQL",
+          "SCSS",
+          "HTML",
+          "API consumer"
+        ],
+        "liveVersionHref": "https://iturres.github.io/tesla-booking-front-end/",
+        "sourceCodeHref": "https://github.com/ITurres/tesla-booking-front-end"
+      }
+    },
+    {
+      "id": "bb4f4776-e356-4b1a-999c-eab8458941fa",
+      "projectType": "solo",
+      "data": {
+        "img": {
+          "src": "budget-app-preview.jpg",
+          "alt": "budget app preview"
+        },
+        "projectName": {
+          "name1": "Budget App",
+          "name2": "Track your expenses"
+        },
+        "description": [
+          "Introducing My Budget App: your go-to mobile web tool for seamless budget management.",
+          "Effortlessly monitor your expenses by categorizing transactions, gaining invaluable",
+          "insights into your spending habits. With intuitive features and user-friendly design",
+          "stay in control of your finances like never before."
+        ],
+        "stack": ["Ruby on Rails", "PostgreSQL", "CSS3", "Bootstrap", "HTML"],
+        "liveVersionHref": "https://mybudget-i9f9.onrender.com/",
+        "sourceCodeHref": "https://github.com/ITurres/budget_app"
+      }
+    },
+    {
+      "id": "309921b6-9e84-499a-8b0f-07af71359350",
+      "projectType": "team",
+      "data": {
+        "img": {
+          "src": "my-recipes-app-preview.jpg",
+          "alt": "my recipes app preview"
+        },
+        "projectName": {
+          "name1": "My Recipes App",
+          "name2": "Share your recipes"
+        },
+        "description": [
+          "Welcome to our Recipe Management Web App! Register to create, edit,",
+          "and delete recipes. Utilize the food inventory to manage ingredients",
+          "and generate shopping lists. Explore public recipes if you prefer",
+          "not to register. Enhance your culinary journey with ease and efficiency."
+        ],
+        "stack": ["Ruby on Rails", "PostgreSQL", "Bootstrap", "HTML"],
+        "liveVersionHref": "https://myrecipes-tsmw.onrender.com/",
+        "sourceCodeHref": "https://github.com/ITurres/recipes_app"
+      }
+    },
+    {
+      "id": "6f03cf5f-e55d-404a-aa67-a864359f4630",
+      "projectType": "team",
+      "data": {
+        "img": {
+          "src": "blog-app-preview.jpg",
+          "alt": "blog app preview"
+        },
+        "projectName": {
+          "name1": "Blog App",
+          "name2": "Share your thoughts"
+        },
+        "description": [
+          "Experience seamless interaction with our Blog App! Users can create accounts",
+          "log in, explore posts from others, leave comments, and show appreciation through",
+          "likes. Additionally, users have the freedom to share their own thoughts by creating",
+          "their unique posts. Dive into a world of engagement and personal expression with our",
+          "dynamic platform.",
+          "This project also provides a RESTful JSON API."
+        ],
+        "stack": ["Ruby on Rails", "PostgreSQL", "Bootstrap", "HTML"],
+        "liveVersionHref": "https://blog-app-m4k8.onrender.com/",
+        "sourceCodeHref": "https://github.com/ITurres/blog_app"
+      }
+    }
+  ],
   "group3": [
     {
       "id": "5b9cb266-00e8-45fe-afe3-a65f4cd435e9",
+      "projectType": "solo",
       "data": {
         "img": {
           "src": "finance-preview.jpg",
@@ -24,7 +129,7 @@
           "Redux",
           "JavaScript",
           "Jest",
-          "SASS",
+          "SCSS",
           "React-Bootstrap",
           "API consumer"
         ],
@@ -34,6 +139,7 @@
     },
     {
       "id": "eedde0d5-2f71-444b-ad47-5d414d4bd4c8",
+      "projectType": "team",
       "data": {
         "img": {
           "src": "spacex-travelers-preview.JPG",
@@ -54,7 +160,7 @@
           "Redux",
           "JavaScript",
           "Jest",
-          "CSS",
+          "CSS3",
           "Bootstrap",
           "HTML",
           "API consumer"
@@ -65,6 +171,7 @@
     },
     {
       "id": "e015361b-fe5e-444d-9958-b0aa65bf6a87",
+      "projectType": "solo",
       "data": {
         "img": {
           "src": "bookstore-preview.JPG",
@@ -85,7 +192,7 @@
           "React.js",
           "Redux",
           "JavaScript",
-          "SASS",
+          "SCSS",
           "Bootstrap",
           "HTML",
           "API consumer"
@@ -98,6 +205,7 @@
   "group2": [
     {
       "id": "cd009743-4436-4b46-96e4-b85fb51560de",
+      "projectType": "solo",
       "data": {
         "img": {
           "src": "math-magicians-preview.JPG",
@@ -116,7 +224,7 @@
         "stack": [
           "React.js",
           "JavaScript",
-          "SASS",
+          "SCSS",
           "Bootstrap",
           "HTML",
           "API consumer"
@@ -127,6 +235,7 @@
     },
     {
       "id": "982d99d4-594c-4206-a215-9f96554bdf69",
+      "projectType": "team",
       "data": {
         "img": {
           "src": "tvmaze-preview.JPG",
@@ -141,13 +250,14 @@
           "shows related info taken from TVmaze API. You can also like them",
           "and add comments thanks to the Involvement API."
         ],
-        "stack": ["JavaScript", "HTML", "CSS", "Bootstrap", "API consumer"],
+        "stack": ["JavaScript", "CSS", "Bootstrap", "HTML", "API consumer"],
         "liveVersionHref": "https://iturres.github.io/TVmaze-shows-website/dist/",
         "sourceCodeHref": "https://github.com/ITurres/TVmaze-movies-website"
       }
     },
     {
       "id": "df5f3c8f-7bea-4218-905b-247dda4b0a4d",
+      "projectType": "solo",
       "data": {
         "img": {
           "src": "leaderboard-preview.JPG",
@@ -163,13 +273,14 @@
           "your score. All data is preserved thanks to the external",
           "Leaderboard API."
         ],
-        "stack": ["JavaScript", "HTML", "SASS", "Bootstrap", "API consumer"],
+        "stack": ["JavaScript", "SCSS", "Bootstrap", "HTML", "API consumer"],
         "liveVersionHref": "https://iturres.github.io/Leaderboard/dist/",
         "sourceCodeHref": "https://github.com/ITurres/Leaderboard"
       }
     },
     {
       "id": "7c5ce6e8-7b3d-4b7b-8c33-dc681294e2a7",
+      "projectType": "solo",
       "data": {
         "img": {
           "src": "task-manager-preview.JPG",
@@ -184,13 +295,14 @@
           "It simply lists the things that you need to do and allows you to mark",
           "them as complete. Tested with Jest."
         ],
-        "stack": ["JavaScript", "Jest", "HTML", "SASS", "Bootstrap"],
+        "stack": ["JavaScript", "Jest", "SCSS", "HTML", "Bootstrap"],
         "liveVersionHref": "https://iturres.github.io/Task-Manager/dist/",
         "sourceCodeHref": "https://github.com/ITurres/Task-Manager"
       }
     },
     {
       "id": "aa4be794-d183-41e0-8fcc-469149dd5dac",
+      "projectType": "solo",
       "data": {
         "img": {
           "src": "awesome-books-preview.JPG",
@@ -205,13 +317,14 @@
           "The learning objectives were to understand different ways to create objects, intro",
           "to CRUD and more."
         ],
-        "stack": ["JavaScript", "HTML", "CSS", "Bootstrap"],
+        "stack": ["JavaScript", "HTML", "CSS3", "Bootstrap"],
         "liveVersionHref": "https://iturres.github.io/Awesome-Books/",
         "sourceCodeHref": "https://github.com/ITurres/Awesome-Books"
       }
     },
     {
       "id": "7a8b772d-c526-4a43-bf44-1eb628a8646f",
+      "projectType": "solo",
       "data": {
         "img": {
           "src": "ferrari-racing-website-preview.JPG",
@@ -227,7 +340,7 @@
           "Understanding Medium-fidelity wireframes,",
           "follow written requirements (e.g. user stories), and much more."
         ],
-        "stack": ["JavaScript", "HTML", "CSS", "Bootstrap"],
+        "stack": ["JavaScript", "HTML", "CSS3", "Bootstrap"],
         "liveVersionHref": "https://iturres.github.io/Ferrari-Racing-Website/",
         "sourceCodeHref": "https://github.com/ITurres/Ferrari-Racing-Website"
       }
@@ -236,6 +349,7 @@
   "group1": [
     {
       "id": "c73f03d2-cdaf-49dc-a52a-5a22d21cdcfb",
+      "projectType": "solo",
       "data": {
         "img": {
           "src": "notes-web-app-preview.JPG",
@@ -251,13 +365,14 @@
           "and where you can create an account, sign in and start creating,",
           "updating, and deleting your notes, plus search for specific ones given their content."
         ],
-        "stack": ["Python", "Flask", "JavaScript", "SQLite", "HTML", "CSS"],
+        "stack": ["Python", "Flask", "JavaScript", "SQLite", "CSS3", "HTML"],
         "liveVersionHref": "https://www.youtube.com/watch?v=UJucGYwoDCA",
         "sourceCodeHref": "https://github.com/ITurres/Notes-Web-App"
       }
     },
     {
       "id": "3be2acec-7816-4c17-ad63-bfe3def2fc77",
+      "projectType": "solo",
       "data": {
         "img": {
           "src": "theTimeMeister-website-preview.JPG",
@@ -268,18 +383,18 @@
           "name2": "E-commerce"
         },
         "description": [
-          "The Time Meister e-commerce is a website that resembles",
-          "the rolex.com site, was a project to continue learning",
-          "and practicing the technologies listed above as well",
-          "as to follow an established design."
+          "Drawing inspiration from the renowned Rolex website, TTM was developed",
+          "with meticulous attention to detail in terms of design, functionality,",
+          "and features, resulting in a partial clone of the original October 2022 platform."
         ],
-        "stack": ["JavaScript", "Node.js", "HTML", "CSS"],
+        "stack": ["JavaScript", "Node.js", "CSS3", "HTML"],
         "liveVersionHref": "https://iturres.github.io/ttm-e-commerce/",
         "sourceCodeHref": "https://github.com/ITurres/ttm-e-commerce"
       }
     },
     {
       "id": "1c045a07-140b-47ae-880a-ac0700032a2b",
+      "projectType": "solo",
       "data": {
         "img": {
           "src": "portfolio1-preview.JPG",
@@ -294,13 +409,14 @@
           "understand and learn more about JavaScript, as well as",
           "CSS animations and transitions and much more."
         ],
-        "stack": ["JavaScript", "HTML", "CSS"],
+        "stack": ["JavaScript", "CSS3", "HTML"],
         "liveVersionHref": "https://iturres.github.io/Emanuel-Portfolio/",
         "sourceCodeHref": "https://github.com/ITurres/Emanuel-Portfolio"
       }
     },
     {
       "id": "067fabb8-22ab-421e-9089-45078bc3ef6f",
+      "projectType": "solo",
       "data": {
         "img": {
           "src": "theDungeonsGame-preview.JPG",
@@ -317,13 +433,14 @@
           "there goes your extremities, if you get to form",
           "the word before they hang you, you get King Arthur's Sword."
         ],
-        "stack": ["JavaScript", "HTML", "CSS"],
+        "stack": ["JavaScript", "CSS3", "HTML"],
         "liveVersionHref": "https://iturres.github.io/The-Dungeons-Game/",
         "sourceCodeHref": "https://github.com/ITurres/The-Dungeons-Game"
       }
     },
     {
       "id": "ec29607d-c59a-425b-8547-43f62c9d5cdf",
+      "projectType": "solo",
       "data": {
         "img": {
           "src": "text-encrypter-preview.JPG",
@@ -340,13 +457,14 @@
           "with JavaScript. In turn, once the logic of the program is finished",
           "structure the page with HTML and give it life with CSS."
         ],
-        "stack": ["JavaScript", "HTML", "CSS"],
+        "stack": ["JavaScript", "CSS3", "HTML"],
         "liveVersionHref": "https://iturres.github.io/Project_Encryptor/",
         "sourceCodeHref": "https://github.com/ITurres/Project_Encryptor"
       }
     },
     {
       "id": "312fe83b-8657-4602-93d1-98b2c8182f73",
+      "projectType": "solo",
       "data": {
         "img": {
           "src": "youtube-clone-preview.JPG",
@@ -361,7 +479,7 @@
           "layouts as well as CSS styles, in order to fully",
           "copy 2023's youtube video player webpage."
         ],
-        "stack": ["JavaScript", "HTML", "CSS"],
+        "stack": ["JavaScript", "CSS3", "HTML"],
         "liveVersionHref": "https://iturres.github.io/project_media_TOP/",
         "sourceCodeHref": "https://github.com/ITurres/project_media_TOP"
       }

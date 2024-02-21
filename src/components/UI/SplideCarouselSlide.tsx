@@ -8,6 +8,7 @@ import LikeButton from './LikeButton.tsx';
 interface SplideCarouselSlideProps {
   projectData: {
     id: string;
+    projectType: string;
     data: {
       img: {
         src: string;
@@ -30,11 +31,16 @@ const SplideCarouselSlide: React.FC<SplideCarouselSlideProps> = ({
 }) => (
   <SplideSlide>
     <div className="splide__slide__container">
-      <img
-        className="splide__slide__img"
-        src={`${process.env.PUBLIC_URL}/projects-preview/${projectData.data.img.src}`}
-        alt={projectData.data.img.alt}
-      />
+      <div className="splide__slide__img--wrapper">
+        <img
+          className="splide__slide__img"
+          src={`${process.env.PUBLIC_URL}/projects-preview/${projectData.data.img.src}`}
+          alt={projectData.data.img.alt}
+        />
+        <span className="splide__slide__project-type">
+          {`${projectData.projectType} project`}
+        </span>
+      </div>
       <div className="splide__slide__overlay">
         <div className="splide__slide__overlay__text">
           <h2 className="text-hue-rotate">
