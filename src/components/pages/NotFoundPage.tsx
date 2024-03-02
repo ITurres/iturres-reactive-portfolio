@@ -28,9 +28,7 @@ const AstronautStyleProps = {
 const NotFoundPage: React.FC<NotFoundPageProps> = ({ fromPath }) => {
   const isWildCardAtAccessPage = fromPath === '/';
 
-  const pathTo = isWildCardAtAccessPage
-    ? '/iturres-reactive-portfolio/'
-    : '/iturres-reactive-portfolio/homepage';
+  const pathTo = isWildCardAtAccessPage ? '/' : '/homepage';
 
   return (
     <main className="not-found-page">

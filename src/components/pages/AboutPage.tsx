@@ -45,7 +45,7 @@ const AboutPage: React.FC = () => {
         <AnimatedButton />
 
         <Link
-          to="/iturres-reactive-portfolio/homepage/contact"
+          to="/homepage/contact"
           className="aboutPage__cta"
           title="This link will take you to the contact page."
         >

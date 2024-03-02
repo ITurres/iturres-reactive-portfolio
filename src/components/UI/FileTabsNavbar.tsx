@@ -12,10 +12,10 @@ const FileTabsNavbar: React.FC = () => {
 
   const paths = useMemo(
     () => ({
-      homepage: '/iturres-reactive-portfolio/homepage',
-      projects: '/iturres-reactive-portfolio/homepage/projects',
-      contact: '/iturres-reactive-portfolio/homepage/contact',
-      expertise: '/iturres-reactive-portfolio/homepage/expertise',
+      homepage: '/homepage',
+      projects: '/homepage/projects',
+      contact: '/homepage/contact',
+      expertise: '/homepage/expertise',
     }),
     [],
   );

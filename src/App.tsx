@@ -8,9 +8,9 @@ import NotFoundPage from './components/pages/NotFoundPage.tsx';
 const App: React.FC = () => (
   <>
     <Routes>
-      <Route path="/iturres-reactive-portfolio/" element={<AccessPage />} />
+      <Route path="/" element={<AccessPage />} />
       <Route
-        path="/iturres-reactive-portfolio/homepage/*"
+        path="homepage/*"
         element={<HomePage />}
       />
       <Route path="/*" element={<NotFoundPage fromPath="/" />} />
