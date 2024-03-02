@@ -34,6 +34,12 @@
     {
       "files": ["src/**/*Slice.js"],
       "rules": { "no-param-reassign": ["error", { "props": false }] }
+    },
+    {
+      "files": ["src/**/*.ts", "src/**/*.tsx"],
+      "rules": {
+        "no-undef": "off"
+      }
     }
   ],
   "ignorePatterns": ["dist/", "build/"]
