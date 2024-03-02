@@ -7,6 +7,7 @@ import Navbar from '../UI/Navbar.tsx';
 import ExpertiseSummaryPage from './ExpertiseSummaryPage.tsx';
 import ContactPage from './ContactPage.tsx';
 import ProjectsPage from './ProjectsPage.tsx';
+import NotFoundPage from './NotFoundPage.tsx';
 import FileTabsNavbar from '../UI/FileTabsNavbar.tsx';
 
 const HomePage: React.FC = () => {
@@ -30,6 +31,7 @@ const HomePage: React.FC = () => {
           <Route path="/expertise" element={<ExpertiseSummaryPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/*" element={<NotFoundPage fromPath="/homepage" />} />
         </Route>
       </Routes>
     </>
