@@ -50,7 +50,7 @@ const AccessPage = () => {
         }
       }, 200);
 
-      $videoElement.current.addEventListener('ended', () => navigate('/iturres-reactive-portfolio/homepage'));
+      $videoElement.current.addEventListener('ended', () => navigate('/homepage'));
     }
   };
 

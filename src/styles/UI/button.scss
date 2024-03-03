@@ -29,3 +29,7 @@ $color2-hover: colors.$color2-hover;
     background-color: $color2-hover;
   }
 }
+
+.static-shadow {
+  box-shadow: 0 0 200px $color2-hover;
+}

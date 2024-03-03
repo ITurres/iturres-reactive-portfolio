@@ -1,0 +1,58 @@
+@use '../variables/colors' as colors;
+@use '../variables/fonts' as fonts;
+
+$color1: colors.$color1;
+$color2-hover: colors.$color2-hover;
+$font-family-regular: fonts.$font-family-regular;
+
+.not-found-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  header {
+    text-align: center;
+    padding: 0.5rem;
+
+    h2 {
+      font-size: 1.2em;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      color: $color1;
+
+      span {
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      font-family: 'Jura', sans-serif;
+      font-size: 1.1rem;
+      padding-bottom: 2rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.not-found-page-btn {
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-family: $font-family-regular;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  color: $color2-hover;
+  border: 1px solid $color2-hover;
+  margin-top: 4rem;
+  padding: 0.9rem 2rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 200px $color2-hover;
+  }
+
+  &:focus {
+    box-shadow: 0 0 10px $color2-hover;
+  }
+}
