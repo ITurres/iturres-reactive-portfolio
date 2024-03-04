@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-    <img src="/public/reactive-portfolio-favicon.png" alt="arthur logo" width="250"  height="auto" />
+    <img src="/public/reactive-portfolio-favicon.png" alt="arthur logo" width="150"  height="auto" />
     <h1><b>⚛️ ITurres | Reactive Portfolio ⚛️</b></h1>
 </div>
 
