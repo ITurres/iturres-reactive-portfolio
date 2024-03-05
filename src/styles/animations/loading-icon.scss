@@ -1,0 +1,16 @@
+.loading-icon {
+  animation: spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite; // * Safari and Chrome.
+  -moz-animation: spin 1s linear infinite; // * Firefox.
+  -o-animation: spin 1s linear infinite; // * Opera.
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
