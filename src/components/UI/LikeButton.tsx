@@ -9,6 +9,7 @@ import { SlLike } from 'react-icons/sl';
 import { VscLoading } from 'react-icons/vsc';
 
 import '../../styles/UI/LikeButton.scss';
+import '../../styles/animations/loading-icon.scss';
 
 import involvement from '../../services/involvementAPI/involvementAPI.ts';
 
@@ -68,6 +69,8 @@ const LikeButton: React.FC<LikeButtonProps> = ({ itemId }) => {
 
     if (likedProject) {
       setLikeCount(likedProject.likes);
+      // ? at this point the loading spinner is still showing because of the initial API request.
+      // * so terminate the loading state, to show the like button with the like count.
       setLoadingToFalse();
     }
   }, [itemId, setLoadingToFalse]);
