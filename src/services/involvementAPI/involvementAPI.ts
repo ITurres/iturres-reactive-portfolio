@@ -22,25 +22,23 @@ const postLike = async (itemId: string) => {
 };
 
 const getLikes = async () => {
-  try {
-    const response = await fetch(`${baseURL}${appId}/likes/`, {
-      method: 'GET',
-    });
+  const response = await fetch(`${baseURL}${appId}/likes/`, {
+    method: 'GET',
+  });
 
-    if (!response.ok) return [];
-
-    // * Only parse the response if it's JSON.
-    // * specially when the involvementAPI : 'appId' is new, the response to be parsed wont be JSON.
-    const contentType = response.headers.get('Content-Type');
-    if (contentType && contentType.includes('application/json')) {
-      const likes = await response.json();
-      if (likes instanceof Array) return likes;
-    }
-
-    return [];
-  } catch (error) {
-    return error;
+  if (!response.ok) {
+    throw new Error(`Error fetching likes: ${response.statusText}`);
   }
+
+  // * Only parse the response if it's JSON.
+  // * specially when the involvementAPI : 'appId' is new, the response to be parsed wont be JSON.
+  const contentType = response.headers.get('Content-Type');
+  if (contentType && contentType.includes('application/json')) {
+    const likes = await response.json();
+    if (likes instanceof Array) return likes;
+  }
+
+  return [];
 };
 
 const involvement = {
