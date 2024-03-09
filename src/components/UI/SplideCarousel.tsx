@@ -10,9 +10,13 @@ import getRandomId from '../../utils/getRandomId.ts';
 /* eslint-disable no-undef */
 interface SplideCarouselProps {
   projectsGroup: Array<{}>;
+  projectsLikes: Array<{}>;
 }
 
-const SplideCarousel: React.FC<SplideCarouselProps> = ({ projectsGroup }) => (
+const SplideCarousel: React.FC<SplideCarouselProps> = ({
+  projectsGroup,
+  projectsLikes,
+}) => (
   <>
     <Splide
       aria-label="Projects carousel"
@@ -39,7 +43,11 @@ const SplideCarousel: React.FC<SplideCarouselProps> = ({ projectsGroup }) => (
       }}
     >
       {projectsGroup.map((projectData) => (
-        <SplideCarouselSlide key={getRandomId()} projectData={projectData} />
+        <SplideCarouselSlide
+          key={getRandomId()}
+          projectData={projectData}
+          projectsLikes={projectsLikes}
+        />
       ))}
     </Splide>
   </>
