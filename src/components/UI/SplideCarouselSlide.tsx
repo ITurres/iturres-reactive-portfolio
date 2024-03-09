@@ -24,10 +24,12 @@ interface SplideCarouselSlideProps {
       sourceCodeHref: string;
     };
   };
+  projectsLikes: Array<{}>;
 }
 
 const SplideCarouselSlide: React.FC<SplideCarouselSlideProps> = ({
   projectData,
+  projectsLikes,
 }) => (
   <SplideSlide>
     <div className="splide__slide__container">
@@ -53,7 +55,7 @@ const SplideCarouselSlide: React.FC<SplideCarouselSlideProps> = ({
               <summary>Description</summary>
               <p>{projectData.data.description.join(' ')}</p>
             </details>
-            <LikeButton itemId={projectData.id} />
+            <LikeButton itemId={projectData.id} projectsLikes={projectsLikes} />
           </div>
           <div className="splide__slide__overlay__text__stack text-hue-rotate">
             {projectData.data.stack.map((stackItem) => (
