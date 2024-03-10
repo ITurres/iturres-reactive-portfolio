@@ -24,6 +24,12 @@ const Navbar: React.FC = () => {
     window.addEventListener('resize', () => {
       setWindowWidth(window.innerWidth);
     });
+
+    return () => {
+      window.removeEventListener('resize', () => {
+        setWindowWidth(window.innerWidth);
+      });
+    }
   }, [windowWidth]);
 
   const $menu = useRef<HTMLElement>(null);
