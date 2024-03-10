@@ -17,6 +17,7 @@ import { LuSquareStack } from 'react-icons/lu';
 import '../../styles/UI/Navbar.scss';
 
 const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const minWith = 768;
 
@@ -36,6 +37,8 @@ const Navbar: React.FC = () => {
   const iconSize = 30;
 
   const toggleMenu = () => {
+    setIsOpen((isOpen) => !isOpen);
+
     $menu.current?.classList.toggle('active');
   };
 
@@ -52,7 +55,8 @@ const Navbar: React.FC = () => {
         type="button"
         onClick={toggleMenu}
         title="Links"
-        aria-label="Menu button"
+        aria-expanded={isOpen ? 'true' : 'false'}
+        aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
       >
         <CgMenuMotion size={iconSize} className="text-hue-rotate" />
       </button>
