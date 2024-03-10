@@ -18,7 +18,7 @@ $dark: colors.$dark;
 }
 
 .menu-navbar {
-  position: absolute;
+  position: fixed;
   top: 0.5rem;
   right: 1px;
   z-index: 200;
