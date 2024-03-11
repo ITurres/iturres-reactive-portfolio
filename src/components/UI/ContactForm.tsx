@@ -17,7 +17,9 @@ const ContactForm: React.FC = () => {
     // * sessionStorage.getItem('formContent')! is not null.
   );
 
+  // * This state is to disable the submit button after the form is submitted.
   const [formSubmittedStatus, setFormSubmittedStatus] = useState(false);
+  const [showSubmitButton, setShowSubmitButton] = useState(false);
 
   const actionURL = process.env.REACT_APP_FORM_ACTION_URL;
 
@@ -54,8 +56,14 @@ const ContactForm: React.FC = () => {
   ) => {
     if (isValid) {
       inputDomElement.classList.remove('invalid');
-      if (inputDomElement.nextSibling instanceof HTMLElement) {
-        inputDomElement.nextSibling.classList.add('show');
+
+      // * If the input is valid, remove invalid class, add show class to next
+      // * input after label, and add valid class.
+      // ! Note: This method of accessing the next input after the label may not
+      // ! be the most robust.
+      const inputElementAfterLabelElement = inputDomElement.nextSibling?.nextSibling;
+      if (inputElementAfterLabelElement instanceof HTMLElement) {
+        inputElementAfterLabelElement.classList.add('show');
       }
       inputDomElement.classList.add('valid');
     } else {
@@ -64,28 +72,26 @@ const ContactForm: React.FC = () => {
     }
   };
 
-  const setSubmitButtonStyle = (isValid: boolean) => {
-    if (isValid) {
-      $submitButton.current?.classList.remove('invalid');
-      $submitButton.current?.classList.add('valid');
-    } else {
-      $submitButton.current?.classList.remove('valid');
-      $submitButton.current?.classList.add('invalid');
-    }
-  };
+  const validateInput = useCallback(
+    (input: any, regex: RegExp) => {
+      const inputKey = input.obj.current?.name as keyof typeof inputs;
+      const isValid = regex.test(input.obj.current?.value || '');
 
-  const validateInput = useCallback((input: any, regex: RegExp) => {
-    const inputKey = input.obj.current?.name as keyof typeof inputs;
-    const isValid = regex.test(input.obj.current?.value || '');
+      inputs[inputKey].validated = isValid;
+      setInputStyle(input.obj.current, isValid);
 
-    inputs[inputKey].validated = isValid;
-    setInputStyle(input.obj.current, isValid);
-
-    // * set the submit button style based on the validity of all inputs.
-    setSubmitButtonStyle(
-      Object.values(inputs).every((inputObj) => inputObj.validated),
-    );
-  }, [inputs]);
+      // * set the submit button style based on the validity of all inputs.
+      const areAllValidInputs = Object.values(inputs).every(
+        (inputObj) => inputObj.validated,
+      );
+      if (areAllValidInputs) {
+        setShowSubmitButton(true);
+      } else {
+        setShowSubmitButton(false);
+      }
+    },
+    [inputs],
+  );
 
   useEffect(() => {
     if (formContent) {
@@ -93,16 +99,19 @@ const ContactForm: React.FC = () => {
     }
   }, [formContent]);
 
-  const updateFormContent = useCallback((input: any) => () => {
-    const inputKey = input.obj.current?.name as keyof typeof inputs;
+  const updateFormContent = useCallback(
+    (input: any) => () => {
+      const inputKey = input.obj.current?.name as keyof typeof inputs;
 
-    setFormContent((previousFormContent: any) => {
-      const currentFormContent = { ...previousFormContent };
-      currentFormContent[inputKey] = input.obj.current?.value;
+      setFormContent((previousFormContent: any) => {
+        const currentFormContent = { ...previousFormContent };
+        currentFormContent[inputKey] = input.obj.current?.value;
 
-      return currentFormContent;
-    });
-  }, []);
+        return currentFormContent;
+      });
+    },
+    [],
+  );
 
   useEffect(() => {
     Object.values(inputs).forEach((input) => {
@@ -236,7 +245,10 @@ const ContactForm: React.FC = () => {
       ref={$form}
       onSubmit={handleSubmission}
     >
+      {/* eslint-disable jsx-a11y/label-has-associated-control */}
+      <label htmlFor="name">Name:</label>
       <input
+        id="name"
         type="text"
         ref={$nameInputRef}
         name="name"
@@ -245,7 +257,9 @@ const ContactForm: React.FC = () => {
         required
       />
 
+      <label htmlFor="company">Company name: </label>
       <input
+        id="company"
         type="text"
         ref={$companyInputRef}
         name="company"
@@ -254,7 +268,9 @@ const ContactForm: React.FC = () => {
         required
       />
 
+      <label htmlFor="email">Email: </label>
       <input
+        id="email"
         type="email"
         ref={$emailInputRef}
         name="email"
@@ -262,7 +278,9 @@ const ContactForm: React.FC = () => {
         required
       />
 
+      <label htmlFor="message">Message: </label>
       <textarea
+        id="message"
         ref={$messageInputRef}
         name="message"
         placeholder="your message, at least 20 characters long"
@@ -271,22 +289,28 @@ const ContactForm: React.FC = () => {
         required
       />
 
-      <button
-        type="submit"
-        disabled={formSubmittedStatus}
-        ref={$submitButton}
-        className="my-btn"
-      >
-        {formSubmittedStatus ? 'Thank you!' : 'Send'}
-        {formSubmittedStatus && (
-          <img
-            src={successButtonIcon}
-            alt="alien waving hand"
-            aria-hidden="true"
-            className="send-email-icon"
-          />
-        )}
-      </button>
+      {showSubmitButton && (
+        <button
+          type="submit"
+          disabled={formSubmittedStatus}
+          ref={$submitButton}
+          className={`my-btn ${showSubmitButton ? 'valid show' : 'invalid'}`}
+          aria-label={
+            formSubmittedStatus ? 'Thank you! email sent' : 'Send email'
+          }
+        >
+          {formSubmittedStatus ? 'Thank you!' : 'Send'}
+
+          {formSubmittedStatus && (
+            <img
+              src={successButtonIcon}
+              alt="alien waving hand"
+              aria-hidden="true"
+              className="send-email-icon"
+            />
+          )}
+        </button>
+      )}
     </form>
   );
 };
