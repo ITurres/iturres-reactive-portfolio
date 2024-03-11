@@ -25,6 +25,10 @@ $valid: rgb(9, 247, 9);
     max-height: 400px;
   }
 
+  label {
+    display: none;
+  }
+
   input,
   textarea {
     border-radius: 0.5rem;
@@ -88,7 +92,6 @@ $valid: rgb(9, 247, 9);
     border-bottom: $border-size solid $color1;
     color: $color1;
     margin-top: 1.5rem;
-    animation: none;
 
     &:hover {
       color: $color2-hover;
@@ -124,6 +127,17 @@ $valid: rgb(9, 247, 9);
       top: 0;
       right: 0;
       width: 35px;
+      animation: fade-in 0.5s ease-in-out;
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
     }
   }
 }
