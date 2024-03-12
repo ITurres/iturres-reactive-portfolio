@@ -36,6 +36,7 @@ const FloatingAstronaut: React.FC<FloatingAstronautProps> = ({
     src={floatingAstronaut}
     alt=""
     className="floating-astronaut"
+    aria-hidden="true"
     style={
       {
         '--maxWidth': `${maxWidth}px`,
