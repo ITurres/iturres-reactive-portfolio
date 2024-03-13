@@ -4,7 +4,7 @@ $color1-hover: colors.$color1;
 $color2-hover: colors.$color2;
 $dark: colors.$dark;
 
-.animated-button {
+.expertise-links {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -22,6 +22,7 @@ $dark: colors.$dark;
   max-width: 550px;
   width: 100%;
   margin-bottom: 0.7rem;
+  cursor: pointer; // * Even though the element is not a button, emulate the button hover effect.
 
   &::before {
     content: '';
