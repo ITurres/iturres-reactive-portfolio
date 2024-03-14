@@ -8,7 +8,7 @@ import profileImage from '../../assets/images/profile/profile.png';
 import homepageDotsImage from '../../assets/images/bg/homepage-dots-img.png';
 import '../../styles/pages/AboutPage.scss';
 
-import AnimatedButton from '../UI/AnimatedButton.tsx';
+import ExpertiseLinks from '../UI/ExpertiseLinks.tsx';
 
 import setPageTitle from '../../utils/setPageTitle.ts';
 
@@ -42,7 +42,7 @@ const AboutPage: React.FC = () => {
           with diverse teams worldwide.
         </p>
 
-        <AnimatedButton />
+        <ExpertiseLinks />
 
         <Link
           to="/homepage/contact"

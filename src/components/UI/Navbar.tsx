@@ -17,6 +17,7 @@ import { LuSquareStack } from 'react-icons/lu';
 import '../../styles/UI/Navbar.scss';
 
 const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const minWith = 768;
 
@@ -24,23 +25,38 @@ const Navbar: React.FC = () => {
     window.addEventListener('resize', () => {
       setWindowWidth(window.innerWidth);
     });
+
+    return () => {
+      window.removeEventListener('resize', () => {
+        setWindowWidth(window.innerWidth);
+      });
+    };
   }, [windowWidth]);
 
   const $menu = useRef<HTMLElement>(null);
   const iconSize = 30;
 
   const toggleMenu = () => {
+    setIsOpen((isOpen) => !isOpen);
+
     $menu.current?.classList.toggle('active');
   };
 
   return (
-    <nav ref={$menu} className="menu-navbar">
+    <nav
+      ref={$menu}
+      className="menu-navbar"
+      aria-label="Menu"
+      role="navigation"
+    >
+      {/* ! SHOW ONLY ON MOBILE */}
       <button
         className="toggle-menu my-btn hover-text"
         type="button"
         onClick={toggleMenu}
-        title="Menu"
-        aria-label="Menu"
+        title="Links"
+        aria-expanded={isOpen ? 'true' : 'false'}
+        aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
       >
         <CgMenuMotion size={iconSize} className="text-hue-rotate" />
       </button>
@@ -50,12 +66,12 @@ const Navbar: React.FC = () => {
             href="https://github.com/ITurres"
             target="_blank"
             rel="noreferrer noopener"
-            aria-label="My Github"
+            aria-label="Author's Github Profile"
           >
             <AiFillGithub
               size={iconSize}
               className="text-hue-rotate"
-              title="My Github"
+              title="Arthur's Github"
             />
           </a>
         </li>
@@ -64,12 +80,12 @@ const Navbar: React.FC = () => {
             href="https://www.linkedin.com/in/arturoemanuelguerraiturres/"
             target="_blank"
             rel="noreferrer noopener"
-            aria-label="My Linkedin"
+            aria-label="Author's Linkedin Profile"
           >
             <BiLogoLinkedin
               size={iconSize}
               className="text-hue-rotate"
-              title="My Linkedin"
+              title="Arthur's Linkedin"
             />
           </a>
         </li>
@@ -78,18 +94,22 @@ const Navbar: React.FC = () => {
             href="https://wellfound.com/u/arturo-arthur-emanuel-guerra-iturres"
             target="_blank"
             rel="noreferrer noopener"
-            aria-label="My Wellfound"
+            aria-label="Author's Wellfound Profile"
           >
             <FaAngellist
               size={iconSize}
               className="text-hue-rotate"
-              title="My Wellfound"
+              title="Arthur's Wellfound"
             />
           </a>
         </li>
         <li style={{ '--elem': 4 } as CSSProperties}>
-          <Link to="/">
-            <BiExit size={iconSize} className="text-hue-rotate" title="Exit" />
+          <Link to="/" aria-label="Exit to the Access page">
+            <BiExit
+              size={iconSize}
+              className="text-hue-rotate"
+              title="Exit to Access Page"
+            />
           </Link>
         </li>
 
@@ -97,38 +117,50 @@ const Navbar: React.FC = () => {
         {windowWidth < minWith && (
           <>
             <li style={{ '--elem': 5 } as CSSProperties}>
-              <Link to="/homepage">
+              <Link
+                to="/homepage"
+                aria-label="About Me Page - learn more about Arthur"
+              >
                 <SiAboutdotme
                   size={iconSize}
                   className="text-hue-rotate"
-                  title="About me"
+                  title="About Arthur"
                 />
               </Link>
             </li>
             <li style={{ '--elem': 6 } as CSSProperties}>
-              <Link to="/homepage/projects">
+              <Link
+                to="/homepage/projects"
+                aria-label="Arthur's Projects Page - learn more about Arthur's projects"
+              >
                 <FaProjectDiagram
                   size={iconSize}
                   className="text-hue-rotate"
-                  title="My Projects"
+                  title="Arthur's Projects"
                 />
               </Link>
             </li>
             <li style={{ '--elem': 7 } as CSSProperties}>
-              <Link to="/homepage/contact">
+              <Link
+                to="/homepage/contact"
+                aria-label="Contact me Page - contact Arthur"
+              >
                 <AiOutlineMail
                   size={iconSize}
                   className="text-hue-rotate"
-                  title="Contact me!"
+                  title="Contact Arthur!"
                 />
               </Link>
             </li>
             <li style={{ '--elem': 8 } as CSSProperties}>
-              <Link to="/homepage/expertise">
+              <Link
+                to="/homepage/expertise"
+                aria-label="Expertise Page - learn more about the author's expertise"
+              >
                 <LuSquareStack
                   size={iconSize}
                   className="text-hue-rotate"
-                  title="Expertise"
+                  title="Arthur's Expertise"
                 />
               </Link>
             </li>

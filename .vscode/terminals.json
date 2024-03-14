@@ -7,8 +7,7 @@
       "name": "Commit",
       "type": "bash",
       "color": "terminal.ansiBlue",
-      "icon": "git-commit",
-      "command": "git branch -a"
+      "icon": "git-commit"
     },
     {
       "name": "React CLI",
@@ -20,8 +19,7 @@
       "name": "React Dev Server",
       "type": "bash",
       "color": "terminal.ansiCyan",
-      "icon": "browser",
-      "command": "npm start"
+      "icon": "browser"
     },
     {
       "name": "Jest",
@@ -33,8 +31,7 @@
       "name": "Linters",
       "type": "bash",
       "color": "terminal.ansiGreen",
-      "icon": "checklist",
-      "command": "npx eslint '**/*.{ts,tsx}' && npx stylelint '**/*.{css,scss}'"
+      "icon": "checklist"
     }
   ]
 }

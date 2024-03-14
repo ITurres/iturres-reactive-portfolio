@@ -68,6 +68,7 @@ const Drone: React.FC = () => {
       alt=""
       ref={drone}
       className="drone"
+      aria-hidden="true"
       style={{
         // * 180px subtracted to place the drone to the top-left of the cursor.
         top: `calc(${position.y}px - 180px)`,
