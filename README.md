@@ -177,9 +177,6 @@ To run the linters included in this project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **LineCount** component height based on the document instead of on window (test).
-- [ ] Scrollable count for **LineCount** component.
-- [ ] **FloatingAstronaut** on **ExpertisePage**.
 - [ ] Add **Suspense** and **ErrorBoundaries**.
 - [x] Swap configs to Environmental Variables.
 - [x] Small Waving Alien in _Thank You btn message_ at the contact form.
